@@ -5,15 +5,25 @@ const pageStyles = {
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center"
 }
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
+  maxWidth: 800,
+  color: "#FFF",
+  fontSize: "48px",
+  width: "100%",
+  textAlign: "center"
 }
 
 const paragraphStyles = {
   marginBottom: 48,
+  fontSize: "24px",
+  color: "#FFF"
 }
 const codeStyles = {
   color: "#8A6534",
