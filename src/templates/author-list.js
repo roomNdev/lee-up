@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import DirectiveGrid from '../components/author/DirectiveGrid.tsx';
 import AuthorGrid from '../components/author/AuthorGrid.tsx';
 import PageHeader from '../components/PageHeader.tsx';
 import PageSpace from '../components/PageSpace.tsx';
@@ -8,9 +9,6 @@ import Seo from '../components/seo.tsx';
 
 export const AuthorsQuery = graphql`
 {
-  sanityAreas(name: {eq: "Principal"}) {
-    name
-  }
     allSanityAreas(filter: {}){
       nodes{
         name
@@ -24,9 +22,7 @@ export const AuthorsQuery = graphql`
         area {
           name
         }
-        instagram
-        facebook
-        linkedin
+        directive
         slug {
           current
         }
@@ -41,9 +37,7 @@ export const AuthorsQuery = graphql`
 `;
 
 function AuthorList({ data, pageContext }) {
-  const principal = data.sanityAreas
-  const authors = data.allSanityAuthor.nodes;
-  const areas = data.allSanityAreas.nodes;
+  // const directiva = data.sanityAreas
   const { currentPage, numberOfPages } = pageContext;
 
   return (
@@ -51,12 +45,13 @@ function AuthorList({ data, pageContext }) {
       <Seo title="Autores" />
       <div className="container">
         <PageHeader
-          title="Miembros"
+          title="Directiva"
         />
-        <AuthorGrid authors={authors} areas={areas} principal={principal}/>
+        <DirectiveGrid />
+        <AuthorGrid />
         {numberOfPages > 1 && (
           <Pagination
-            baseURL="/authors"
+            baseURL="/miembros"
             currentPage={currentPage}
             numberOfPages={numberOfPages}
           />

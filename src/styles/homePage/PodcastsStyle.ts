@@ -23,20 +23,25 @@ export const PodcastsStyles = styled.div`
 
     .link {
       border-radius: 10px;
-      padding: 4px;
+      padding-block: 4px;
+      padding-inline: 16px;
       background-color: #fff;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
       display: flex;
-      justify-content: start;
+      justify-content: center;
       align-items: center;
       font-size: 20px;
       font-weight: 600;
       text-align: center;
-      width: 220px;
+      transition: background-color .2s;
+      /* width: 220px; */
       gap: 6px;
       color: var(--gray);
       svg {
         width: 40px;
+      }
+      &:hover {
+        background-color: #eee;
       }
     }
   }

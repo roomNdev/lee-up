@@ -5,4 +5,8 @@ export const PageHeaderStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .title {
+    font-size: 36px;
+    text-align: center;
+  }
 `;

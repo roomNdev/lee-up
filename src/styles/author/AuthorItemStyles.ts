@@ -9,6 +9,14 @@ export const AuthorItemStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 280px;
+  min-width: 280px;
+  .image__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
   .profileImage {
     width: 190px;
     aspect-ratio: 1;
@@ -23,6 +31,8 @@ export const AuthorItemStyles = styled.div`
   .title {
     color: var(--text-1);
     font-size: 24px;
+    text-align: center;
+    margin-top: 4px;
   }
   .role {
     font-size: 20px;
@@ -49,4 +59,21 @@ export const AuthorItemStyles = styled.div`
           color: var(--light-gray);
         }
       }
+      @media only screen and (max-width: 768px) {
+    
+      max-width: 150px;
+      min-width: 150px;
+      
+      .profileImage {
+        width: 80px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+      .title {
+        font-size: 18px;
+      }
+  .role {
+    font-size: 12px;
+  }
+  }
 `;

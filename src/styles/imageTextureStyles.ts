@@ -5,11 +5,11 @@ export const ImageTextureStyles = styled.div`
     display: flex;
     z-index: -10;
     width: 100%;
-    height: auto;
+    height: 150vh;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 20%;
+    top: -20%;
     left: 0;
     user-select: none;
 }

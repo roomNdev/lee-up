@@ -18,11 +18,11 @@ function Podcasts() {
             Escúchanos en estas plataformas
             </ParagraphText>
             <section className='links'>
-                <a href="www.spotify.com/" className='link' target='_blank'>
+                <a href="https://open.spotify.com/show/1b9b0aNhp2pT7BOv3zOtUo?si=d3442e60284f416a&nd=1&dlsi=377f8f05db4446f8" className='link' target='_blank'>
                   <FaSpotify color='#1ED760'></FaSpotify>
                   Spotify
                 </a>
-                <a href="www.music.apple.com/" className='link' target='_blank'>
+                <a href="https://podcasts.apple.com/pe/podcast/lee-up/id1616994431?l=en" className='link' target='_blank'>
                   <PiApplePodcastsLogoLight color='#AA1DD3'/>
                   Apple Podcast
                 </a>

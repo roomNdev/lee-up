@@ -35,7 +35,7 @@ export default styled.header`
           color: var(--text-1);
           display: inline-block;
           text-decoration: none;
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           padding: 0.5rem 1rem;
           border-radius: 6px;
           transition: background-color 0.3s;

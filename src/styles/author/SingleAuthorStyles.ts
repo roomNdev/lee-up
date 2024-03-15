@@ -30,4 +30,29 @@ export const SingleAuthorStyles = styled.div`
     margin-top: 32px;
     text-align: center;
   }
+  .author__socialList {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+      a {
+        padding: 10px;
+        border-radius: 100%;
+        background-color: var(--text-1);
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        color: var(--primary-light-blue);
+        transition: color .3s;
+      }
+        a:hover {
+          color: var(--light-gray);
+        }
+      }
+    .no__post {
+      text-align: center;
+      opacity: .6;
+    }
 `;

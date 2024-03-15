@@ -56,14 +56,14 @@ function Blogs({ data, pageContext }) {
       <PageSpace top={80} bottom={100}>
         <div className="container">
           <PageHeader
-            title="Reseñas"
+            title="Reseñas de nuestros miembros"
           />
           <BlogGrid blogs={blogs} />
           {numberOfPages > 1 && (
             <Pagination
               currentPage={currentPage}
               numberOfPages={numberOfPages}
-              baseURL="/blogs"
+              baseURL="/posts"
             />
           )}
         </div>

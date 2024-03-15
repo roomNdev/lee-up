@@ -1,8 +1,8 @@
 import React from 'react'
-import ParagraphText from '../typography/ParagraphText'
-import { AboutSectionStyles } from '../../styles/homePage/AboutStyles'
+import ParagraphText from '../../typography/ParagraphText'
+import { AboutSectionStyles } from '../../../styles/homePage/AboutStyles'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
-import ImageTexture from '../../constants/imageTexture'
+import ImageTexture from '../../../constants/imageTexture'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const About: React.FC<{}> = () => {

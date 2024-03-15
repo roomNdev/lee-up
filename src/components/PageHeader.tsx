@@ -7,7 +7,7 @@ function PageHeader({ title, children, className }) {
   return (
     <div className={className}>
       <PageHeaderStyles>
-        <SectionTitle tag={"h2"}>
+        <SectionTitle tag={"h2"} className="title">
           {title}
         </SectionTitle>
         {children}

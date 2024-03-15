@@ -1,19 +1,26 @@
 import styled from 'styled-components';
 
 export const FooterStyles = styled.footer`
-  padding: 5rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
   text-align: center;
+  background-color: var(--primary-light-blue);
   .footer__text {
     margin: 0 auto;
     margin-top: 1rem;
     max-width: 400px;
   }
   .footer__menuList {
-    margin-top: 1rem;
-        background-color: var(--text-1);
-        border-radius: 8px;
+    margin-block: 2rem;
+    border-radius: 8px;
+    display: flex;
+    background-color: var(--text-1);
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      /* width: max-content; */
+      /* margin: 2rem auto; */
+      flex-wrap: wrap;
     li {
-      display: inline-block;
       margin: 0 1rem;
       a {
         padding: 4px;

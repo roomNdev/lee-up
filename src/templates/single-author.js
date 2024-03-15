@@ -8,11 +8,17 @@ import PageSpace from '../components/PageSpace.tsx';
 import Seo from '../components/seo.tsx';
 import { Title } from '../components/typography/Title.tsx';
 import { SingleAuthorStyles } from '../styles/author/SingleAuthorStyles.ts';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import ParagraphText from '../components/typography/ParagraphText.tsx';
+
 
 export const authorQuery = graphql`
   query SingleAuthorQuery($id: String!) {
     sanityAuthor(id: { eq: $id }) {
       name
+      instagram
+      facebook
+      linkedin
       profileImage {
         asset {
           gatsbyImageData
@@ -110,9 +116,20 @@ function SingleAuthor({ data }) {
               <MyPortableText value={author._rawBio} />
             </div>
           </div>
-          {/* <Title className="title">Reseñas</Title> */}
-          <hr className="hr" />
-          <BlogGrid blogs={blogs} />  
+          {author.member ? <Title className="poems__title">Miembro</Title> : <Title className="poems__title">Escritor casual</Title>}
+          <div className="author__socialList">
+            <a href={`https://www.facebook.com/${author.facebook}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>
+            <a href={`https://www.instagram.com/${author.instagram}`} target='_blank'rel='noreferrer'><FaInstagram/></a>
+            <a href={`https://www.linkedin.com/${author.linkedin}`} target='_blank'  rel='noreferrer'><FaLinkedin/></a>
+        </div>
+          {blogs[0] 
+            ?  <BlogGrid blogs={blogs} />  
+            :   <>
+            <Title className="poems__title">Reseñas</Title>
+            <hr className="hr" />
+            <ParagraphText className="no__post">No hay reseñas todavia</ParagraphText>
+            </>
+          }
           {
             poems[0] && (
               <>

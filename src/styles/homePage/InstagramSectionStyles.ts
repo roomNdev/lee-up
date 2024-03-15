@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-export const AboutSectionStyles = styled.div`
+export const InstagramSectionStyles = styled.div`
         h2 {
-        margin-top: 80px;
             font-size: 40px;
             color: var(--gray);
             text-align: center;
+            margin-top: 160px;
         }
     .container {
-        margin-top: 40px;
+            margin-top: 40px;
         display: flex;
         align-items: center;
         text-align: center;

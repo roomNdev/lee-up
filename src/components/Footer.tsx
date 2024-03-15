@@ -3,13 +3,17 @@ import React from 'react';
 import { menu } from '../constants/menu';
 import { socialLinks } from '../constants/socialLinks';
 import { FooterStyles } from '../styles/FooterStyles';
-import Logo from './Logo';
 import ParagraphText from './typography/ParagraphText';
+import Logo from './Logo';
 
 function Footer() {
   return (
     <FooterStyles>
       <div className="container">
+        <Logo/>
+      <ParagraphText className="footer__text">
+      “El verbo leer, como el verbo amar y el verbo soñar, no soporta el modo imperativo”. - Jorge Luis Borges
+        </ParagraphText>
         <ul className="footer__menuList">
           {menu.map((item) => (
             <li key={item.path}>

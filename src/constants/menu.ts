@@ -12,7 +12,7 @@ export const menu = [
     path: '/posts',
   },
   {
-    title: 'Poemas',
+    title: 'Escritura creativa',
     path: '/poemas',
   },
   {

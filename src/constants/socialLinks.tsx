@@ -1,20 +1,20 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 
 export const socialLinks = [
   {
     name: 'instagram',
-    url: 'https://www.youtube.com',
+    url: 'https://www.instagram.com/leeudelpacifico/',
     icon: <FaInstagram />,
   },
   {
-    name: 'facebook',
-    url: 'https://www.facebook.com',
-    icon: <FaFacebook />,
+    name: 'tiktok',
+    url: 'https://www.tiktok.com/@leeudelpacifico',
+    icon: <FaTiktok />,
   },
   {
     name: 'linkedin',
-    url: 'https://www.linkedin.com',
+    url: 'https://www.linkedin.com/company/leeudelpacifico',
     icon: <FaLinkedin />,
-  },
+  }
 ];

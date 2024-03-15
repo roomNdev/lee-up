@@ -47,7 +47,7 @@ function Categories({ data, pageContext }) {
             <Pagination
               currentPage={currentPage}
               numberOfPages={numberOfPages}
-              baseURL="/categories"
+              baseURL="/categorias"
             />
           )}
         </div>

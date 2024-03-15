@@ -5,17 +5,22 @@ import HeroSection from '../components/homePage/HeroSection';
 import About from "../components/homePage/About";
 import Podcasts from "../components/homePage/Podcasts";
 import Seo from '../components/seo';
+import InstagramSection from "../components/homePage/InstagramSection";
 
-const IndexPage: React.FC<PageProps>  = () => (
+
+
+const IndexPage: React.FC<PageProps>  = () => {
+  return (
   <>
     <Seo title={"Inicio"} description={"Página de inicio de Lee UP, una organización estudiantil de la Universidad del Pacífico"}/>
     <HeroSection />
     <div className="container">
       <About/>
+      <InstagramSection/>
       <Podcasts/>
     </div>
   </>
-);
+)};
 
 export default IndexPage;
 
