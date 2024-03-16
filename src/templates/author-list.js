@@ -51,13 +51,13 @@ function AuthorList({ data, pageContext }) {
         <DirectiveGrid />
         <AuthorGrid />
         <ExMemberGrid/>
-        {numberOfPages > 1 && (
+        {/* {numberOfPages > 1 && (
           <Pagination
             baseURL="/miembros"
             currentPage={currentPage}
             numberOfPages={numberOfPages}
           />
-        )}
+        )} */}
       </div>
     </PageSpace>
   );

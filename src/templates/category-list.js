@@ -43,13 +43,13 @@ function Categories({ data, pageContext }) {
             description="This month will bring about the 88th Academy Awards. Starting in 1928, this prestigious award ceremony..."
           />
           <CategoryGrid categories={categories} />
-          {numberOfPages > 1 && (
+          {/* {numberOfPages > 1 && (
             <Pagination
               currentPage={currentPage}
               numberOfPages={numberOfPages}
               baseURL="/categorias"
             />
-          )}
+          )} */}
         </div>
       </PageSpace>
     </>

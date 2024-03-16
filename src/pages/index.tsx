@@ -6,6 +6,7 @@ import About from "../components/homePage/About";
 import Podcasts from "../components/homePage/Podcasts";
 import Seo from '../components/seo';
 import InstagramSection from "../components/homePage/InstagramSection";
+import FeaturedPosts from "../components/homePage/FeaturedPosts";
 
 const IndexPage: React.FC<PageProps>  = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage: React.FC<PageProps>  = () => {
     <div className="container">
       <About/>
       <InstagramSection/>
+      <FeaturedPosts/>
       <Podcasts/>
     </div>
   </>

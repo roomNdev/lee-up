@@ -17,9 +17,14 @@ export const authorQuery = graphql`
     sanityAuthor(id: { eq: $id }) {
       name
       instagram
+      bio
       facebook
       linkedin
       member
+      role
+      area {
+        name
+      }
       profileImage {
         asset {
           gatsbyImageData
@@ -114,12 +119,12 @@ function SingleAuthor({ data }) {
               className="profileImage"
             />
             <Title className="name">{author.name}</Title>
-            <div className="bio">
-              <MyPortableText value={author._rawBio} />
-            </div>
+          <ParagraphText className="bio">
+            {author.bio}
+          </ParagraphText>
           </div>
           {author.member
-            ? <Title className="poems__title">Miembro</Title> 
+            ? <Title className="poems__title">{author.role} {`- ${author.area[0].name}`}</Title> 
             : <Title className="poems__title">Miembro del taller de escritura creativa</Title>}
           <div className="author__socialList">
             <a href={`https://www.facebook.com/${author.facebook}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>
