@@ -10,26 +10,27 @@ import Button from '../buttons/Button';
 function PoemItem({ path, author, title, image, publishedAt }) {
   return (
     <PoemItemStyles>
-      {image.coverImage && <Link to={`/poemas/${path}`}>
+      {image.coverImage && <Link to={`/escritura-creativa/${path}`}>
         <GatsbyImage
           image={image.coverImage.asset.gatsbyImageData}
           alt={image.coverImage.alt}
           className="img"
         />
       </Link>}
-      <Link to={`/miembros/${author.slug.current}`}>
+      
+      <Link to={`/escritura-creativa/${path}`}>
+        <Title tag={"h3"} className="title">{title}</Title>
+        <ParagraphText className="by__container">Por: {author.name}| <Link to={`/miembros/${author.slug.current}`}>
         <GatsbyImage
           image={author.profileImage.asset.gatsbyImageData}
           alt={`Foto de perfil de ${author.name}`}
           className="author__img"
         />
-      </Link>
-      <Link to={`/poemas/${path}`}>
-        <Title tag={"h3"} className="title">{title}</Title>
+      </Link></ParagraphText>
       </Link>
       <div className='button__wrapper'>
         <Button tag="a" variant='' className="button__more">
-          <Link to={`/poemas/${path}`}>Leer más</Link>
+          <Link to={`/escritura-creativa/${path}`}>Leer más</Link>
         </Button>
       </div>
       {publishedAt && (

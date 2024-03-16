@@ -26,6 +26,12 @@ export default styled.header`
       justify-content: center;
       gap: 1rem;
       li {
+        &:nth-child(4):hover {
+          a {
+            background-color: var(--text-1);
+            color: var(--white-1);
+          }
+        }
         &:hover {
           a {
             background-color: var(--white-1);

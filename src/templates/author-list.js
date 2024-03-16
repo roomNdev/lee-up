@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import DirectiveGrid from '../components/author/DirectiveGrid.tsx';
 import AuthorGrid from '../components/author/AuthorGrid.tsx';
+import ExMemberGrid from '../components/author/ExMemberGrid.tsx';
 import PageHeader from '../components/PageHeader.tsx';
 import PageSpace from '../components/PageSpace.tsx';
 import Pagination from '../components/Pagination.tsx';
@@ -49,6 +50,7 @@ function AuthorList({ data, pageContext }) {
         />
         <DirectiveGrid />
         <AuthorGrid />
+        <ExMemberGrid/>
         {numberOfPages > 1 && (
           <Pagination
             baseURL="/miembros"

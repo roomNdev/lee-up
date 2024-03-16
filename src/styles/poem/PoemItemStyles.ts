@@ -7,6 +7,7 @@ export const PoemItemStyles = styled.div`
   align-items: center;
   border-radius: 10px;
   position: relative;
+  min-width: 250px;
   background-color: var(--primary-light-blue);
   .img {
     max-width: 280px;
@@ -17,13 +18,21 @@ export const PoemItemStyles = styled.div`
       transition: 0.3s ease-in-out transform;
     }
   }
+  .by__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+  }
   .author__img {
     aspect-ratio: 1;
-    width: 70px;
-    position: absolute;
-    left: 16px;
+    width: 50px;
+    /* position: absolute; */
+    /* right: 40px; */
+    /* bottom: 70px; */
+    background-color: var(--text-1);
     border-radius: 100%;
-    top: 395px;
     img {
       object-position: 50% 50%;
     }
@@ -33,6 +42,8 @@ export const PoemItemStyles = styled.div`
     padding-top: 25px;
     font-size: 24px;
     margin-bottom: 0.5rem;
+    margin-inline: 4px;
+    text-align: center;
   }
   .button__wrapper {
     width: 100%;

@@ -1,14 +1,14 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { AuthorItemStyles } from '../../styles/author/AuthorItemStyles';
+import { ExMemberItemStyles } from '../../styles/author/ExMemberItemStyles';
 import { Title } from '../typography/Title';
 import ParagraphText from '../typography/ParagraphText';
 import { socialLinks } from '../../constants/socialLinks';
 import { Link } from 'gatsby';
 
-function AuthorItem({ name, area, role, slug, profileImage }) {
+function ExMemberItem({ name, role, slug, profileImage }) {
   return (
-    <AuthorItemStyles className="author-item" >
+    <ExMemberItemStyles className="author-item" >
       <Link to={`/miembros/${slug.current}`}>
         <section className='image__wrapper'>
           <GatsbyImage
@@ -18,7 +18,7 @@ function AuthorItem({ name, area, role, slug, profileImage }) {
           />
         </section>
         <section className='data'>
-          <Title
+          <Title tag={"h2"}
           className="title">
             {name}
           </Title>
@@ -28,8 +28,8 @@ function AuthorItem({ name, area, role, slug, profileImage }) {
         </section>
       </Link>
       
-    </AuthorItemStyles>
+    </ExMemberItemStyles>
   );
 }
 
-export default AuthorItem;
+export default ExMemberItem;

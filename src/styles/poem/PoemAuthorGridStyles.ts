@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-export const PoemGridStyles = styled.div`
-display: flex;
+export const PoemAuthorGridStyles = styled.div`
+  /* display: grid;
+  
+  display: grid;
+  
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 280px); */
+  display: flex;
   margin-top: 3.5rem;
   gap: 30px;
   justify-content: center;

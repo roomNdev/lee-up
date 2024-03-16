@@ -10,6 +10,32 @@ export const HeroSectionStyles = styled.div`
   .container {
     height: 100%;
   }
+
+  .image__container {
+    .hero__image__creativa {
+      overflow: visible;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      img {
+          z-index: 10;
+          max-width: 300px;
+          border-radius: 20px;
+        }
+          &::after {
+            border-radius: 32px;
+            width: 100%;
+            max-width: 300px;
+            min-height: 100%;
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 10%;
+            right: -10px;
+            background-color: var(--primary-light-blue);
+          }
+    }
+  }
   .hero__wrapper {
     width: 100%;
     height: 70vh;  
@@ -88,6 +114,11 @@ export const HeroSectionStyles = styled.div`
           max-width: 330px;
           font-size: 3rem;
         }
+      }
+    }
+    .image__container {
+      .hero__image__creativa{
+      position: relative;
       }
     }
   }

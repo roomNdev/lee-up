@@ -66,6 +66,7 @@ export const query = graphql`
           current
         }
         author {
+          name
           slug {
             current
           }
@@ -95,7 +96,9 @@ export const query = graphql`
 function SingleCategory({ data }) {
   const category = data.sanityCategory;
   const blogs = data.allSanityBlog.nodes;
-  const poems = data.allSanityPoem.nodes
+  const poems = data.allSanityPoem.nodes;
+
+  console.log(poems);
   return (
     <PageSpace top={80} bottom={100}>
       <SingleCategoryStyles>
@@ -114,7 +117,7 @@ function SingleCategory({ data }) {
           <BlogGrid blogs={blogs} />
           { poems[0] && 
           (<>
-            <Title className="title">Poemas</Title>
+            <Title className="title">Escritura creativa</Title>
           <hr className="hr" />
           <PoemGrid poems={poems} />
           </>

@@ -19,6 +19,7 @@ export const authorQuery = graphql`
       instagram
       facebook
       linkedin
+      member
       profileImage {
         asset {
           gatsbyImageData
@@ -38,6 +39,7 @@ export const authorQuery = graphql`
         }
         author {
           name
+          member
           slug {
             current
           }
@@ -99,7 +101,7 @@ function SingleAuthor({ data }) {
   const author = data.sanityAuthor;
   const blogs = data.allSanityBlog.nodes;
   const poems = data.allSanityPoem.nodes;
-  
+  console.log(author);
   return (
     <PageSpace top={80} bottom={100}>
       <Seo title={author.name} />
@@ -116,7 +118,9 @@ function SingleAuthor({ data }) {
               <MyPortableText value={author._rawBio} />
             </div>
           </div>
-          {author.member ? <Title className="poems__title">Miembro</Title> : <Title className="poems__title">Escritor casual</Title>}
+          {author.member
+            ? <Title className="poems__title">Miembro</Title> 
+            : <Title className="poems__title">Miembro del taller de escritura creativa</Title>}
           <div className="author__socialList">
             <a href={`https://www.facebook.com/${author.facebook}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>
             <a href={`https://www.instagram.com/${author.instagram}`} target='_blank'rel='noreferrer'><FaInstagram/></a>

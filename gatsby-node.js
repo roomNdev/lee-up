@@ -73,7 +73,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // single poem pages
   poems.forEach((poem) => {
     actions.createPage({
-      path: `/poemas/${poem.slug.current}`,
+      path: `/escritura-creativa/${poem.slug.current}`,
       component: singlePoemTemplate,
       context: { id: poem.id },
     });
@@ -111,7 +111,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const totalPoemListPages = Math.ceil(poems.length / postsPerPage);
   Array.from({ length: totalPoemListPages }).forEach((_, index) => {
     actions.createPage({
-      path: index === 0 ? `/poemas` : `/poemas/${index + 1}`,
+      path: index === 0 ? `/escritura-creativa` : `/escritura-creativa/${index + 1}`,
       component: poemListTemplate,
       context: {
         limit: postsPerPage,

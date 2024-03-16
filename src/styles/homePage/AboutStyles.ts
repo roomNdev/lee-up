@@ -27,14 +27,37 @@ export const AboutSectionStyles = styled.div`
             flex-direction: column;
         }
         .groupal__image {
+            min-width: 300px;
             max-width: 600px;
-            padding: 40px 0px 40px 40px;
-            background-color: var(--primary-light-blue);
-            border-radius: 160px 200px 200px 160px;
+            position: relative;
             img {
-                border-radius: 120px;
+                border-radius: 32px;
+            }
+            &::after {
+                border-radius: 32px;
+                width: 100%;
+                max-width: 600px;
+                min-height: 100%;
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 5%;
+                left: -5%;
+                background-color: var(--primary-light-blue);
             }
         }
         
     }
+    @media (max-width: 1000px) {
+        .container {
+        flex-direction: column-reverse;
+            .groupal__image {
+            /* background-color: var(--primary-light-blue); */
+            /* border-radius: 160px 32pxpx 32pxpx 160px; */
+            img {
+                border-radius: 32px;
+            }
+        }
+    }
+}
 `

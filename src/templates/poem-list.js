@@ -1,12 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import PageHeader from '../components/PageHeader.tsx';
+// import PageHeader from '../components/PageHeader.tsx';
 import Seo from '../components/seo.tsx';
 import PageSpace from '../components/PageSpace.tsx';
-import PoemGrid from '../components/poems/PoemGrid.tsx';
-import Pagination from '../components/Pagination.tsx';
+// import Pagination from '../components/Pagination.tsx';
 import HeroSection from '../components/poems/main/HeroSection.tsx'
 import About from '../components/poems/main/About.tsx'
+import PoemGrid from '../components/poems/main/PoemAuthorsGrid.tsx'
+import FeaturedWriting from '../components/poems/main/FeaturedWriting.tsx'
 
 export const BlogsQuery = graphql`
 query poemListQuery($limit: Int!, $offset: Int!) {
@@ -46,27 +47,29 @@ query poemListQuery($limit: Int!, $offset: Int!) {
 `;
 
 function Poems({ data, pageContext }) {
-  const { currentPage, numberOfPages } = pageContext;
-  const poems = data.allSanityPoem.nodes;
+  // const { currentPage, numberOfPages } = pageContext;
+  // const poems = data.allSanityPoem.nodes;
 
   return (
     <>
       <Seo title="Poems" />
-      <PageSpace top={80} bottom={100}>
+      <PageSpace top={10} bottom={100}>
         <div className="container">
-          <PageHeader
+          {/* <PageHeader
             title="Taller de escritura creativa con Cesare del Mastro"
-          />
+          /> */}
           <HeroSection />
-            <About/>
-          <PoemGrid poems={poems} />
+          <FeaturedWriting/>
+          {/* <PoemGrid poems={poems} />
           {numberOfPages > 1 && (
             <Pagination
-              currentPage={currentPage}
-              numberOfPages={numberOfPages}
-              baseURL="/poemas"
+            currentPage={currentPage}
+            numberOfPages={numberOfPages}
+            baseURL="/poemas"
             />
-          )}
+            )} */}
+            <PoemGrid/>
+            <About/>
         </div>
       </PageSpace>
     </>

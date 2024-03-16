@@ -13,7 +13,7 @@ export const menu = [
   },
   {
     title: 'Escritura creativa',
-    path: '/poemas',
+    path: '/escritura-creativa',
   },
   {
     title: 'Contacto',

@@ -7,8 +7,6 @@ import Podcasts from "../components/homePage/Podcasts";
 import Seo from '../components/seo';
 import InstagramSection from "../components/homePage/InstagramSection";
 
-
-
 const IndexPage: React.FC<PageProps>  = () => {
   return (
   <>
