@@ -15,7 +15,7 @@ function FeaturedWriting() {
               id
               title
               publishedAt
-               genre{
+               genre {
                 title
               }
               slug {

@@ -53,7 +53,7 @@ function PoemAuthorsGrid({}) {
             {poem.map((item) => {
             return (<PoemAuthorItem
                   key={item.author.id}
-                  title={item.author.title}
+                  // title={item.author.title}
                   name={item.author.name}
                   cicle={item.author.cicle[0].cicle}
                   slug={item.author.slug}
