@@ -54,23 +54,13 @@ function Poems({ data, pageContext }) {
     <>
       <Seo title="Poems" />
       <PageSpace top={10} bottom={100}>
-        <div className="container">
           {/* <PageHeader
             title="Taller de escritura creativa con Cesare del Mastro"
           /> */}
           <HeroSection />
           <FeaturedWriting/>
-          {/* <PoemGrid poems={poems} />
-          {numberOfPages > 1 && (
-            <Pagination
-            currentPage={currentPage}
-            numberOfPages={numberOfPages}
-            baseURL="/poemas"
-            />
-            )} */}
             <PoemGrid/>
             <About/>
-        </div>
       </PageSpace>
     </>
   );

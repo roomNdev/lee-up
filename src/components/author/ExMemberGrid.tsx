@@ -62,7 +62,7 @@ function ExMemberGrid({}) {
                             <summary>{cicle.cicle}</summary>
                             <PoemAuthorGridStyles>
                             {authors.map((item) => {
-                            if (cicle.cicle === item.cicle.cicle) {
+                            if (cicle.cicle !== item.cicle[0].cicle) {
                             return 
                             }
                             return (
@@ -70,7 +70,6 @@ function ExMemberGrid({}) {
                                 key={item.id}
                                 name={item.name}
                                 slug={item.slug}
-                                area={item.area[0].name}
                                 role={item.role}
                                 profileImage={item.profileImage}
                                 />)

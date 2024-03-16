@@ -14,9 +14,7 @@ function DirectiveGrid() {
               area {
                 name
               }
-              instagram
-              facebook
-              linkedin
+              directive
               slug {
                 current
               }
@@ -40,10 +38,7 @@ function DirectiveGrid() {
                 name={item.name}
                 slug={item.slug}
                 area={item.area[0].name}
-                role={item.area[0].name}
-                instagram={item.instagram}
-                facebook={item.facebook}
-                linkedin={item.linkedin}
+                role={item.role}
                 profileImage={item.profileImage}
                 />
                 ))

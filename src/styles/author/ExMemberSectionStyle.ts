@@ -9,7 +9,13 @@ export default styled.div`
     color: var(--text-1);
     margin-bottom: 20px;
   }
+  details:nth-child(1){
+    font-size: 30px;
+    padding-block: 15px;
+    background-color: var(--text-1);
+  }
   details {
+    margin-block: 16px;
     font-size: 20px;
     padding-block: 10px;
     text-align: center;

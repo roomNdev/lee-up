@@ -6,7 +6,7 @@ import ParagraphText from '../typography/ParagraphText';
 import { socialLinks } from '../../constants/socialLinks';
 import { Link } from 'gatsby';
 
-function AuthorItem({ name, area, role, slug, profileImage }) {
+function AuthorItem({ name, directive, area, role, slug, profileImage }) {
   return (
     <AuthorItemStyles className="author-item" >
       <Link to={`/miembros/${slug.current}`}>

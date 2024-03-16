@@ -8,21 +8,22 @@ export const PoemSectionStyles = styled.div`
   position: relative;
   z-index: 10;
   margin-top: 20vh;
-
+  width: 100%;
   .container {
     height: 100%;
-    .hero__wrapper {
     width: 100%;
+    margin: 0;
+    .hero__wrapper {
+    width: 80%;
     height: 100%;  
     margin-bottom: 10vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: left;
     gap: 40px;
       .hero__heading {
         max-width: 700px;
-        font-size: 8rem;
+        font-size: 7rem;
         font-family: 'Inter Variable', sans-serif;
         font-weight: 700;
         margin: 0.2rem 0;
