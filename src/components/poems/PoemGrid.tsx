@@ -9,6 +9,7 @@ function PoemGrid({ poems }) {
         poems.map((poem) => (
           <PoemItem
             key={poem.id}
+            genre={poem.genre}
             path={poem.slug.current}
             title={poem.title}
             author={poem.author}

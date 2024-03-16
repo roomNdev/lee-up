@@ -7,7 +7,7 @@ import ParagraphText from '../typography/ParagraphText';
 import { Title } from '../typography/Title';
 import Button from '../buttons/Button';
 
-function PoemItem({ path, author, title, image, publishedAt }) {
+function PoemItem({ path, author, title, image, publishedAt, genre }) {
   return (
     <PoemItemStyles>
       {image.coverImage && <Link to={`/escritura-creativa/${path}`}>
@@ -36,8 +36,14 @@ function PoemItem({ path, author, title, image, publishedAt }) {
       {publishedAt && (
         <ParagraphText className="publishedAt">
           {format(new Date(publishedAt), 'p, MMMM dd, yyyy')}
+          
         </ParagraphText>
       )}
+      {genre[0] && 
+          <ParagraphText>
+            {genre[0].title}
+          </ParagraphText>
+        }
     </PoemItemStyles>
   );
 }

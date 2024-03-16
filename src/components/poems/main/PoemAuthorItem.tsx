@@ -5,7 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Title } from '../../typography/Title';
 import { PoemAuthorItemStyles } from '../../../styles/poem/PoemAuthorItemStyles';
 
-function PoemAuthorItem({name, title, slug, profileImage}) {
+function PoemAuthorItem({name, cicle, slug, profileImage}) {
   return (
     <PoemAuthorItemStyles className="author-item">
       <Link to={`/miembros/${slug.current}`}>
@@ -21,6 +21,7 @@ function PoemAuthorItem({name, title, slug, profileImage}) {
           className="title">
             {name}
           </Title>
+          {cicle}
         </section>
       </Link>
     </PoemAuthorItemStyles>

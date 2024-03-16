@@ -59,7 +59,7 @@ function Poems({ data, pageContext }) {
           /> */}
           <HeroSection />
             <About/>
-          <FeaturedWriting/>
+            <FeaturedWriting/>
             <PoemGrid/>
       </PageSpace>
     </>

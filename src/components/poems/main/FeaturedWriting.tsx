@@ -15,6 +15,9 @@ function FeaturedWriting() {
               id
               title
               publishedAt
+               genre{
+                title
+              }
               slug {
                 current
               }

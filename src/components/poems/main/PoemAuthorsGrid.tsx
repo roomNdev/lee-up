@@ -15,6 +15,9 @@ function PoemAuthorsGrid({}) {
        author{
          id
          name
+         cicle {
+          cicle
+         }
          slug {
            current
          }
@@ -44,28 +47,21 @@ function PoemAuthorsGrid({}) {
   return (
     <>      
     <CiclePoemStyles >
-      <h2>Autores de los poemas</h2>
-      {cicles.map((cicle) => {
-        return(
-          <details key={cicle.cicle}>
-            <summary>{cicle.cicle}</summary>
+      <h2>Algunos de los autores del taller</h2>
+          <div>
             <PoemAuthorGridStyles>
             {poem.map((item) => {
-            if (cicle.cicle === item.author.cicle) {
-               return 
-              }
             return (<PoemAuthorItem
                   key={item.author.id}
                   title={item.author.title}
                   name={item.author.name}
+                  cicle={item.author.cicle[0].cicle}
                   slug={item.author.slug}
                   profileImage={item.author.profileImage}
                   />)
             })}
             </PoemAuthorGridStyles>
-          </details>
-      )}
-      )}
+            </div>
       </CiclePoemStyles>
     </>
   );
