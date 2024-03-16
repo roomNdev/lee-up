@@ -6,9 +6,8 @@ import PageSpace from '../components/PageSpace.tsx';
 import BlogGrid from '../components/blog/BlogGrid.tsx';
 import Pagination from '../components/Pagination.tsx';
 
-export const BlogsQuery = graphql`
-query blogListQuery() {
-  allSanityBlog(sort: {publishedAt: DESC} {    
+export const BlogsQuery = graphql`{
+  allSanityBlog(sort: {publishedAt: DESC}) {    
     nodes {
       id
       title
