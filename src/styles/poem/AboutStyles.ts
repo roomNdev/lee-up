@@ -8,6 +8,7 @@ export const AboutSectionStyles = styled.div`
     flex-direction: column;
         .title {
             margin-top: 80px;
+
             margin-bottom: 40px;
             font-size: 40px;
             color: var(--text-1);
@@ -19,6 +20,14 @@ export const AboutSectionStyles = styled.div`
             align-items: center;
             justify-content: center;
             position: relative;
+            .text__wrapper {
+                p {
+                    flex-direction: row-reverse;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
             .bio__image {
             float: right;
             margin: 10px;

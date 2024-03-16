@@ -58,9 +58,9 @@ function Poems({ data, pageContext }) {
             title="Taller de escritura creativa con Cesare del Mastro"
           /> */}
           <HeroSection />
+            <About/>
           <FeaturedWriting/>
             <PoemGrid/>
-            <About/>
       </PageSpace>
     </>
   );

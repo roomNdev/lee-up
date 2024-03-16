@@ -8,13 +8,14 @@ export const PoemSectionStyles = styled.div`
   position: relative;
   z-index: 10;
   margin-top: 20vh;
+  padding: 10px;
   width: 100%;
   .container {
     height: 100%;
     width: 100%;
     margin: 0;
     .hero__wrapper {
-    width: 80%;
+    width: 100%;
     height: 100%;  
     margin-bottom: 10vh;
     display: flex;
@@ -40,10 +41,9 @@ export const PoemSectionStyles = styled.div`
         justify-content: center;
     .hero__image__creativa {
       overflow: visible;
-      position: absolute;
       right: 0;
       bottom: 20%;
-      max-width: 30%;
+      max-width: 100%;
       img {
           z-index: -1;
           border-radius: 20px;
@@ -56,8 +56,8 @@ export const PoemSectionStyles = styled.div`
             content: "";
             position: absolute;
             z-index: -10;
-            top: 10%;
-            right: -10px;
+            top: 5%;
+            left: -5%;
             background-color: var(--primary-light-blue);
           }
     }
@@ -75,9 +75,23 @@ export const PoemSectionStyles = styled.div`
           a {
           color: var(--text-1);
           font-weight: 500;
+          text-decoration: underline;
           }
       }
-  
+  @media only screen and (max-width: 1000px) {
+    .container{
+      .hero__wrapper{
+        flex-direction: column;
+      }
+    }.image__container {
+      .hero__image__creativa{
+        max-width: 50%;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     min-height: 60vh;
     .container{

@@ -50,7 +50,7 @@ export const AboutSectionStyles = styled.div`
     }
     @media (max-width: 1000px) {
         .container {
-        flex-direction: column-reverse;
+        flex-direction: column;
             .groupal__image {
             /* background-color: var(--primary-light-blue); */
             /* border-radius: 160px 32pxpx 32pxpx 160px; */
