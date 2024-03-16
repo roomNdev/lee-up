@@ -45,7 +45,8 @@ function FeaturedWriting() {
     <FeaturedWritingStyles>
       <Title tag="h2">Algunos Poemas</Title>
       <PoemGrid poems={featuredPoems} />
-      <Link to="/categorias/escritura-creativa"><Button variant='more'>Ver más</Button></Link>
+      <Link to="/categorias/escritura-creativa">
+        <Button variant='more'>Ver más</Button></Link>
     </FeaturedWritingStyles>
   );
 }
