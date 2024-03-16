@@ -75,6 +75,9 @@ export const authorQuery = graphql`
         slug {
           current
         }
+        genre {
+          title
+        }
         author {
           slug {
             current

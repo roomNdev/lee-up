@@ -39,9 +39,9 @@ function PoemItem({ path, author, title, image, publishedAt, genre }) {
           
         </ParagraphText>
       )}
-      {genre && 
+      {genre[0] && 
           <ParagraphText>
-            {genre.title}
+            {genre[0].title}
           </ParagraphText>
         }
     </PoemItemStyles>

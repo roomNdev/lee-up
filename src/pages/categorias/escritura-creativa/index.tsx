@@ -113,6 +113,7 @@ const IndexPage: React.FC<PageProps>  = () => {
                                     <PoemGridStyles>
                                         <PoemItem
                                         key={item.id}
+                                        genre={item.genre}
                                         path={item.slug.current}
                                         author={item.author}
                                         title={item.title}

@@ -62,6 +62,9 @@ export const query = graphql`
         id
         title
         publishedAt
+        genre {
+          title
+        }
         slug {
           current
         }
