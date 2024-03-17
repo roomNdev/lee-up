@@ -49,6 +49,7 @@ export const FooterStyles = styled.footer`
         background-color: var(--text-1);
         display: inline-block;
         width: 50px;
+        /* aspect-ratio: 1; */
         height: 50px;
         color: var(--white-1);
         transition: color .3s;
@@ -64,5 +65,22 @@ export const FooterStyles = styled.footer`
     margin-top: 1rem;
     color: var(--gray);
     font-size: 1.2rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .footer__menuList{
+      display: none;
+    }
+    .footer__socialList{
+      li{
+      a{
+        padding: 7px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+    }
+    .copyright {
+      font-size: 1rem;
+    }
   }
 `;

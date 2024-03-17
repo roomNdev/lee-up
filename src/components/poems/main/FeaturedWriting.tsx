@@ -9,44 +9,42 @@ import Button from '../../buttons/Button';
 function FeaturedWriting() {
   const data = useStaticQuery(graphql`
   {
-    allSanityFeatured(filter: { _id: { eq: "featuredItems" } }) {
-      nodes {
-        writing{
-              id
-              title
-              publishedAt
-               genre {
+    allSanityPoem(sort: {publishedAt:DESC}, limit: 3){
+      nodes{
+                id
                 title
-              }
-              slug {
-                current
-              }
-              categories {
-                title
+                publishedAt
+                 genre {
+                  title
+                }
                 slug {
                   current
                 }
-              }
-              author {
-                name
-                slug {
-                  current
-                }
-                profileImage {
-                  asset {
-                    gatsbyImageData
+                categories {
+                  title
+                  slug {
+                    current
                   }
                 }
-              }
-        }
-      }
+                author {
+                  name
+                  slug {
+                    current
+                  }
+                  profileImage {
+                    asset {
+                      gatsbyImageData
+                    }
+                  }
+    }
+  }
     }
   }
   `);
-  const featuredPoems = data.allSanityFeatured.nodes[0].writing;
+  const featuredPoems = data.allSanityPoem.nodes;
   return (
     <FeaturedWritingStyles>
-      <Title tag="h2">Algunos Poemas</Title>
+      <Title tag="h2">Escritos recientes</Title>
       <PoemGrid poems={featuredPoems} />
       <Link to="/categorias/escritura-creativa">
         <Button variant='more'>Ver más</Button></Link>

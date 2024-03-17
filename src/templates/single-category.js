@@ -34,6 +34,8 @@ export const query = graphql`
           _rawChildren
         }
         author {
+          role
+          name
           slug {
             current
           }
@@ -70,6 +72,7 @@ export const query = graphql`
         }
         author {
           name
+          role
           slug {
             current
           }

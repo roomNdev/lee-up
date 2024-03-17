@@ -55,7 +55,6 @@ function SingleBlog({ data }) {
               alt={blog.coverImage.alt}
               className="blog-cover-image"
             />
-            <Title className="title">{blog.title}</Title>
             <ParagraphText className="publishedAt">
               <FiCalendar />
               {format(new Date(blog.publishedAt), 'p, MMMM dd, yyyy')}
@@ -80,6 +79,8 @@ function SingleBlog({ data }) {
               </Link>
             </ParagraphText>
           </div>
+          
+          <Title className="title">{blog.title}</Title>
           <hr className="hr" />
           <div className="body">
             <MyPortableText value={blog._rawBody} />

@@ -88,7 +88,6 @@ const IndexPage: React.FC<PageProps>  = () => {
     <div className="container">
     <SingleCategoryStyles>
         <div className="container">
-          <Seo title={"Escritura creativa"} />
           <PageHeader title={"Escritura creativa"} className="pageHeader">
             <ParagraphText className="description">
               {category._rawDescription[0].children[0].text}
@@ -113,7 +112,7 @@ const IndexPage: React.FC<PageProps>  = () => {
                                     <PoemGridStyles>
                                         <PoemItem
                                         key={item.id}
-                                        genre={item.genre}
+                                        genre={""}
                                         path={item.slug.current}
                                         author={item.author}
                                         title={item.title}

@@ -95,24 +95,19 @@ export const HeroSectionStyles = styled.div`
       &::after {
         width: 100%;
       }
-      .right {
-        position: initial;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
         .hero__image {
           height: 300px;
           margin: 0 auto;
-        }
+        
       }
       .left {
         width: 100%;
         margin-top: 1rem;
         padding: 0;
         .hero__heading {
-          max-width: 330px;
+          max-width: 50%;
           font-size: 3rem;
+          padding-bottom: 15%;
         }
       }
     }

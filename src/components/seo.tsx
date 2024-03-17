@@ -22,7 +22,7 @@ const SEO = ({ title, description }) => {
   };
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet title="Lee UP">
       <meta name="description" content={seo.description} />
     </Helmet>
   );

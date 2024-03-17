@@ -45,6 +45,7 @@ export const authorQuery = graphql`
         author {
           name
           member
+          role
           slug {
             current
           }
@@ -79,6 +80,8 @@ export const authorQuery = graphql`
           title
         }
         author {
+          role
+          name
           slug {
             current
           }

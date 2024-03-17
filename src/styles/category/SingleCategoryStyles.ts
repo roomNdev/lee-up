@@ -45,6 +45,10 @@ export const SingleCategoryStyles = styled.div`
       &:after {
         display: none;
       }
+      .title, .description {
+        color: var(--text-1);
+        text-align: center;
+      }
     }
     .coverImage {
       display: none;

@@ -8,6 +8,7 @@ export const PoemItemStyles = styled.div`
   border-radius: 10px;
   position: relative;
   min-width: 250px;
+  max-width: 250px;
   background-color: var(--primary-light-blue);
   .img {
     max-width: 280px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BlogGridStyles = styled.div`
-  margin-top: 3.5rem;
+  /* margin-top: 3.5rem;
   display: grid;
   gap: 5rem;
   justify-content: center;
@@ -9,5 +9,18 @@ export const BlogGridStyles = styled.div`
   @media only screen and (max-width: 768px) {
     grid-template-columns: repeat(auto-fill, 250px);
     gap: 3rem;
+  } */
+
+  display: flex;
+  margin-top: 3.5rem;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  .no__members {
+    text-align: center;
+  }
+  @media only screen and (max-width: 768px) {
+    gap: 2rem;
   }
 `;

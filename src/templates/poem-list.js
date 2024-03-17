@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import React from 'react';
 // import PageHeader from '../components/PageHeader.tsx';
 import Seo from '../components/seo.tsx';
@@ -8,6 +8,7 @@ import HeroSection from '../components/poems/main/HeroSection.tsx'
 import About from '../components/poems/main/About.tsx'
 import PoemGrid from '../components/poems/main/PoemAuthorsGrid.tsx'
 import FeaturedWriting from '../components/poems/main/FeaturedWriting.tsx'
+
 
 export const BlogsQuery = graphql`
 query poemListQuery($limit: Int!, $offset: Int!) {
@@ -27,6 +28,7 @@ query poemListQuery($limit: Int!, $offset: Int!) {
       }
       author {
         name
+        role
         slug {
           current
         }
@@ -61,6 +63,7 @@ function Poems({ data, pageContext }) {
             <About/>
             <FeaturedWriting/>
             <PoemGrid/>
+            
       </PageSpace>
     </>
   );

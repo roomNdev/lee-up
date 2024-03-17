@@ -9,15 +9,15 @@ import { FeaturedBlogsStyles } from '../../styles/homePage/FeaturedBlogsStyles';
 function FeaturedPosts() {
   const data = useStaticQuery(graphql`
   {
-    allSanityFeatured(filter: { _id: { eq: "featuredItems" } }) {
+    allSanityBlog(sort: {publishedAt:DESC}, limit: 3) {
       nodes {
-					posts{
             title
             slug {
               current
             }
             author {
               name
+              role
               slug {
                 current
               }
@@ -36,11 +36,11 @@ function FeaturedPosts() {
               _rawChildren
             }
           }
-        }
+        
       }
     }
   `);
-  const featuredPosts = data.allSanityFeatured.nodes[0].posts;
+  const featuredPosts = data.allSanityBlog.nodes;
   return (
     <FeaturedBlogsStyles>
       <Title tag="h2" className="title">Reseñas destacadas</Title>

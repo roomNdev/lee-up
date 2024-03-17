@@ -20,7 +20,7 @@ function PoemItem({ path, author, title, image, publishedAt, genre }) {
       
       <Link to={`/escritura-creativa/${path}`}>
         <Title tag={"h3"} className="title">{title}</Title>
-        <ParagraphText className="by__container">Por: {author.name}| <Link to={`/miembros/${author.slug.current}`}>
+        <ParagraphText className="by__container">Por: {author.name} | <Link to={`/miembros/${author.slug.current}`}>
         <GatsbyImage
           image={author.profileImage.asset.gatsbyImageData}
           alt={`Foto de perfil de ${author.name}`}

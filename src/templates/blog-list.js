@@ -29,6 +29,7 @@ export const BlogsQuery = graphql`{
         slug {
           current
         }
+        role
         profileImage {
           asset {
             gatsbyImageData

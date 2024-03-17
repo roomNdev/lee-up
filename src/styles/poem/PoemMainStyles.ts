@@ -94,6 +94,7 @@ export const PoemSectionStyles = styled.div`
 
   @media only screen and (max-width: 768px) {
     min-height: 60vh;
+    margin-top: 10vh;
     .container{
       .hero__wrapper {
         display: flex;
