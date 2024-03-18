@@ -148,7 +148,7 @@ function SingleAuthor({ data }) {
           {
             poems[0] && (
               <>
-              <Title className="poems__title">Poemas</Title>
+              <Title className="poems__title">Escritura creativa</Title>
               <hr className="hr" />
               <PoemGrid poems={poems} />
               </>

@@ -40,10 +40,10 @@ export default styled.div`
   }
   p {
     width: 100%;
-      text-align: center;
+      /* text-align: center; */
     }
   .body {
-    display: flex;
+    /* display: flex; */
     margin-top: 2rem;
     
     h1,

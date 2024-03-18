@@ -37,13 +37,13 @@ function PoemItem({ path, author, title, image, publishedAt, genre }) {
         <ParagraphText className="publishedAt">
           {format(new Date(publishedAt), 'p, MMMM dd, yyyy')}
           
-        </ParagraphText>
-      )}
       {genre[0] && 
           <ParagraphText>
             {genre[0].title}
           </ParagraphText>
         }
+        </ParagraphText>
+      )}
     </PoemItemStyles>
   );
 }
