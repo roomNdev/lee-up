@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
 export const AboutSectionStyles = styled.div`
-    margin-top: 10vh;
+    /* margin-top: 5vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
         .title {
             margin-top: 80px;
-
             margin-bottom: 40px;
-            font-size: 40px;
+            font-size: 30px;
+            font-weight: 800;
             color: var(--text-1);
             text-align: center;
         }
         .bio__container{
-            width: 80%;
+            width: 65%;
             /* display: flex; */
             align-items: center;
             justify-content: center;
@@ -30,10 +30,11 @@ export const AboutSectionStyles = styled.div`
             }
             .bio__image {
             float: right;
-            margin: 10px;
+            margin: 15px;
+            margin-left: 20px;
             overflow: visible;
-            min-width: 240px;
-            max-width: 30%;
+            min-width: 260px;
+            max-width: 45%;
             position: relative;
                 img {
                     border-radius: 32px;
@@ -70,10 +71,11 @@ export const AboutSectionStyles = styled.div`
                 p {
                     display: flex;
                     flex-direction: column;
+                    text-align: justify;
                 }
             }
             .bio__image{
-                min-width: 180px;
+                min-width: 250px;
             }
         }
     }

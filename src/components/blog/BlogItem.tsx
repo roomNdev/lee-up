@@ -23,7 +23,7 @@ function BlogItem({ path, excerpt, author, title, image, categories, publishedAt
           alt={`Foto de perfil de ${author.name}`}
           className="author__img"
         />
-        <ParagraphText className="author__name">{author.name} | {author.role}</ParagraphText>
+        <ParagraphText className="author__name">{author.name}</ParagraphText>
       </Link>
       <Link to={`/posts/${path}`}>
         <Title className="title">{title}</Title>

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const BlogItemStyles = styled.div`
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 10px;
   position: relative;
@@ -45,14 +44,15 @@ export const BlogItemStyles = styled.div`
   }
   .title {
     color: var(--text-1);
-    padding-top: 25px;
+    margin-top: 20px;
+    /* padding-top: 25px; */
     font-size: 22px;
     margin-bottom: 0.5rem;
     text-align: center;
   }
   .excerpt {
     font-size: 12px;
-    margin-left: 16px;
+    margin-inline: 16px;
     text-wrap: pretty;
   }
   .button__wrapper {
@@ -90,6 +90,8 @@ export const BlogItemStyles = styled.div`
   @media only screen and (max-width: 768px) {
     .title {
       margin-bottom: 0.5rem;
+      margin-inline: 8px;
+      font-size: 18px;
     }
     .excerpt {
       display: none;
@@ -98,7 +100,9 @@ export const BlogItemStyles = styled.div`
       height: 215px;
     }
     .author__img{
-      top: 180px;
+      top: 195px;
+      width: 40px;
+      height: 40px;
     }
     .author__name{
       display: none;
@@ -111,8 +115,6 @@ export const BlogItemStyles = styled.div`
     .author__img{
       left: 0;
       top: 195px;
-      width: 40px;
-      height: 40px;
     }
     .author__name{
       display: none;

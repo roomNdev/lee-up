@@ -1,13 +1,30 @@
 import styled from 'styled-components';
 
 export const SingleBlogStyles = styled.div`
-  max-width: 700px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    max-width: 700px;
+  }
+  .image__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .blog-cover-image {
     height: 300px;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    display: inline;
+    /* margin: 0 auto; */
+    /* display: flex; */
+    img {
+      /* object-fit: contain !important; */
+    }
   }
   .title {
+    margin-top: 20px;
     margin-bottom: 1rem;
     font-size: 2.5rem;
     text-align: center;
@@ -61,5 +78,11 @@ export const SingleBlogStyles = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 48px;
+  }
+  .author__img {
+    width: 50px;
+    height: 50px;
+    background-color: var(--text-1);
+    border-radius: 100%;
   }
 `;

@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const PoemItemStyles = styled.div`
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 10px;
   position: relative;
   min-width: 250px;
   max-width: 250px;
   background-color: var(--primary-light-blue);
+  height: max-content;
   .img {
     max-width: 280px;
     height: 430px;

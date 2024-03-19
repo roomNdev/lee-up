@@ -71,11 +71,11 @@ function PoemAuthorsGrid({}) {
             })}
             </PoemAuthorGridStyles>
             </div>
-            <Link to="/categorias/escritura-creativa" className='more'>
+            {/* <Link to="/categorias/escritura-creativa" className='more'>
               <Button variant='more' >
                 Ver todos los escritos
               </Button>
-            </Link>
+            </Link> */}
       </CiclePoemStyles>
     </>
   );

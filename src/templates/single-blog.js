@@ -36,6 +36,11 @@ export const postQuery = graphql`
         slug {
           current
         }
+        profileImage {
+          asset {
+            gatsbyImageData
+          }
+        }
       }
     }
   }
@@ -50,11 +55,13 @@ function SingleBlog({ data }) {
       <PageSpace top={80} bottom={100}>
         <div className="container">
           <div className="blog-header">
-            <GatsbyImage
-              image={blog.coverImage.asset.gatsbyImageData}
-              alt={blog.coverImage.alt}
-              className="blog-cover-image"
-            />
+            <div className='image__container'>
+              <GatsbyImage
+                image={blog.coverImage.asset.gatsbyImageData}
+                alt={blog.coverImage.alt}
+                className="blog-cover-image"
+              />
+            </div>
             <ParagraphText className="publishedAt">
               <FiCalendar />
               {format(new Date(blog.publishedAt), 'p, MMMM dd, yyyy')}
@@ -73,7 +80,11 @@ function SingleBlog({ data }) {
               </span>
             </ParagraphText>
             <ParagraphText className="author">
-              <FiUser />
+            <GatsbyImage
+              image={blog.author.profileImage.asset.gatsbyImageData}
+              alt={`Foto de perfil de ${blog.author.name}`}
+              className="author__img"
+            />
               <Link to={`/miembros/${blog.author.slug.current}`}>
                 {blog.author.name}
               </Link>
@@ -86,11 +97,11 @@ function SingleBlog({ data }) {
             <MyPortableText value={blog._rawBody} />
           </div>
           <div className='button__wrapper'>
-          <Link to='/'>
+          {/* <Link to='/'>
             <Button variant='more'>
               {'< Inicio'}
             </Button>
-          </Link>
+          </Link> */}
           </div>
         </div>
       </PageSpace>

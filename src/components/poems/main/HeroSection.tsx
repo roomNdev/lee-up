@@ -13,10 +13,11 @@ function HeroSection() {
               <span className='hero__thin'>Taller de escritura creativa </span>
               con Cesare del Mastro
             </h1>
-            <ParagraphText className="creativa__description">
+            
+          </section>
+          <ParagraphText className="creativa__description">
             El taller de escritura creativa es un proyecto que nació gracias a la iniciativa del profesor <a href='https://faculty.up.edu.pe/es/persons/cesare-del-mastro' target='_blank' rel='norefferer'>Cesare del Mastro</a>, y la <a href='https://www.instagram.com/lagaleriaup/' target='_blank' rel='norefferer'>Galeria UP</a>. A la cual LEE UP se sumó para brindar este espacio y compartir los escritos de los estudiantes participes de este. Este taller tiene como objetivo difundir la escritura creativa tanto en poesía, cuentos y ensayos
             </ParagraphText>
-          </section>
             <div className='image__container'>
               <StaticImage
                 className="hero__image__creativa"

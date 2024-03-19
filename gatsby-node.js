@@ -1,5 +1,5 @@
 exports.createPages = async ({ graphql, actions }) => {
-  const postsPerPage = Number(process.env.GATSBY_POST_PER_PAGE) || 10;
+  const postsPerPage = Number(process.env.GATSBY_POST_PER_PAGE) || 12;
   // templates path
   const singlePoemTemplate = require.resolve('./src/templates/single-poem.js');
   const singleBlogTemplate = require.resolve('./src/templates/single-blog.js');

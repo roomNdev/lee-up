@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PoemGridStyles = styled.div`
-display: flex;
+  display: flex;
   margin-top: 3.5rem;
   gap: 30px;
   justify-content: center;

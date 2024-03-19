@@ -11,7 +11,7 @@ const About: React.FC<{}> = () => {
             {/* <section className='container'>
             </section> */}
             <Title tag={"h2"} className="title">
-              Cesare del Mastro
+              Conoce a Cesare del Mastro
             </Title>
             <section className="bio__container">
               <section className='text__wrapper'>

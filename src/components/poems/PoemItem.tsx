@@ -10,10 +10,10 @@ import Button from '../buttons/Button';
 function PoemItem({ path, author, title, image, publishedAt, genre }) {
   return (
     <PoemItemStyles>
-      {image.coverImage && <Link to={`/escritura-creativa/${path}`}>
+      {image.imageData && <Link to={`/escritura-creativa/${path}`}>
         <GatsbyImage
-          image={image.coverImage.asset.gatsbyImageData}
-          alt={image.coverImage.alt}
+          image={image.imageData.asset.gatsbyImageData}
+          alt={image.imageData.alt}
           className="img"
         />
       </Link>}
@@ -35,13 +35,13 @@ function PoemItem({ path, author, title, image, publishedAt, genre }) {
       </div>
       {publishedAt && (
         <ParagraphText className="publishedAt">
-          {format(new Date(publishedAt), 'p, MMMM dd, yyyy')}
           
       {genre[0] && 
           <ParagraphText>
             {genre[0].title}
           </ParagraphText>
         }
+          {format(new Date(publishedAt), 'p, MMMM dd, yyyy')}
         </ParagraphText>
       )}
     </PoemItemStyles>

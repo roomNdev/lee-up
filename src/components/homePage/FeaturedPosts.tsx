@@ -5,6 +5,7 @@ import { SectionTitle, Title } from '../typography/Title';
 import { FeaturedWritingStyles } from '../../styles/poem/FeaturedWritingStyles';
 import BlogGrid from '../blog/BlogGrid';
 import { FeaturedBlogsStyles } from '../../styles/homePage/FeaturedBlogsStyles';
+import Button from '../buttons/Button';
 
 function FeaturedPosts() {
   const data = useStaticQuery(graphql`
@@ -43,8 +44,11 @@ function FeaturedPosts() {
   const featuredPosts = data.allSanityBlog.nodes;
   return (
     <FeaturedBlogsStyles>
-      <Title tag="h2" className="title">Reseñas destacadas</Title>
+      <Title tag="h2" className="title">Últimas reseñas</Title>
       <BlogGrid blogs={featuredPosts} />
+      <Link to="/posts" className='more'>
+        <Button variant='more'>Ver todas las reseñas</Button>
+      </Link>
     </FeaturedBlogsStyles>
   );
 }

@@ -14,6 +14,11 @@ function FeaturedWriting() {
                 id
                 title
                 publishedAt
+                coverImage{
+                  asset {
+                    gatsbyImageData
+                  }
+                }
                  genre {
                   title
                 }

@@ -9,7 +9,7 @@ export default styled.div`
   justify-content: center;
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     color: var(--text-1);
     margin-bottom: 20px;

@@ -5,14 +5,14 @@ export const FeaturedWritingStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
   margin-top: 10vh;
   h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     color: var(--text-1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .featuredBlogs__text {
     max-width: 450px;

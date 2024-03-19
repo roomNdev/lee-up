@@ -6,8 +6,9 @@ import PageSpace from '../components/PageSpace.tsx';
 import BlogGrid from '../components/blog/BlogGrid.tsx';
 import Pagination from '../components/Pagination.tsx';
 
-export const BlogsQuery = graphql`{
-  allSanityBlog(sort: {publishedAt: DESC}) {    
+export const BlogsQuery = graphql`
+query BlogsQuery($limit: Int!, $offset: Int!){
+  allSanityBlog(sort: {publishedAt: DESC},limit: $limit,skip: $offset) {    
     nodes {
       id
       title
@@ -59,13 +60,13 @@ function Blogs({ data, pageContext }) {
             title="Reseñas de nuestros miembros"
           />
           <BlogGrid blogs={blogs} />
-          {/* {numberOfPages > 1 && (
+          {numberOfPages > 1 && (
             <Pagination
               currentPage={currentPage}
               numberOfPages={numberOfPages}
               baseURL="/posts"
             />
-          )} */}
+          )}
         </div>
       </PageSpace>
     </>

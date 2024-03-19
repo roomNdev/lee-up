@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const AboutSectionStyles = styled.div`
         h2 {
-        margin-top: 80px;
+        /* margin-top: 80px; */
             font-size: 40px;
             color: var(--gray);
             text-align: center;
+            font-weight: 500;
         }
     .container {
         margin-top: 40px;
@@ -49,6 +50,9 @@ export const AboutSectionStyles = styled.div`
         
     }
     @media (max-width: 1000px) {
+        h2 {
+            font-size: 2.8rem;
+        }
         .container {
         flex-direction: column;
             .groupal__image {

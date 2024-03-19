@@ -5,7 +5,7 @@ export default styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+        gap: 8%;
         margin-bottom: 10vh;
         overflow: visible;
         .left, .right {
@@ -52,13 +52,14 @@ export default styled.div`
         text-align: center;
     }
     .form {
+        padding-inline: 15%;
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
     input,textarea {
         padding-block: 10px;
-        padding-left: 30px;
+        padding-left: 4%;
         font-size: 20px;
         border: 0;
         border-radius: 4px;

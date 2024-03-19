@@ -61,6 +61,7 @@ export const HeroSectionStyles = styled.div`
         font-weight: 700;
         margin: 0.2rem 0;
         color: var(--text-1);
+        padding-bottom: 20px;
       }
       .hero__thin {
         display: block;
@@ -83,7 +84,7 @@ export const HeroSectionStyles = styled.div`
   }
   @media only screen and (max-width: 768px) {
     min-height: 50vh;
-    margin-bottom: 20vh;
+    /* margin-bottom: 4vh; */
     .hero__wrapper {
       height: 50vh;  
       display: flex;
