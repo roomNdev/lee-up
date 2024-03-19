@@ -64,7 +64,7 @@ function PoemAuthorsGrid({}) {
                   key={item[0].author.id}
                   // title={item.author.title}
                   name={item[0].author.name}
-                  cicle={item[0].author.cicle[0].cicle}
+                  cicle={item[0].author.cicle}
                   slug={item[0].author.slug}
                   profileImage={item[0].author.profileImage}
                   />)

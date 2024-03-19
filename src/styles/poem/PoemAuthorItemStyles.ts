@@ -9,8 +9,11 @@ export const PoemAuthorItemStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 150px;
+  max-width: 180px;
   min-width: 150px;
+  .cicle {
+    color: var(--white-1);
+  }
   .image__wrapper {
     display: flex;
     width: 100%;
@@ -19,8 +22,9 @@ export const PoemAuthorItemStyles = styled.div`
   }
   .profileImage {
     width: 120px;
-    aspect-ratio: 1;
-    border-radius: 50%;
+    height: 120px;
+    /* aspect-ratio: 1; */
+    border-radius: 100%;
   }
   .data {
     display: flex;
@@ -30,7 +34,8 @@ export const PoemAuthorItemStyles = styled.div`
   }
   .title {
     color: var(--white-1);
-    font-size: 24px;
+    font-size: 20px;
+    margin-inline: 4px;
     text-align: center;
     margin-top: 4px;
   }
@@ -66,11 +71,12 @@ export const PoemAuthorItemStyles = styled.div`
       
       .profileImage {
         width: 80px;
+        height: 80px;
         aspect-ratio: 1;
         border-radius: 50%;
       }
       .title {
-        font-size: 18px;
+        font-size: 16px;
       }
   .role {
     font-size: 12px;

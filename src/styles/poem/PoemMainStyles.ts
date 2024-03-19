@@ -134,7 +134,7 @@ export const PoemSectionStyles = styled.div`
 
     .container{
       .hero__wrapper {
-        gap: 15px;
+        gap: 18px;
         
       .hero__heading {
         max-width: 330px;
