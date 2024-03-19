@@ -24,11 +24,13 @@ export const PoemItemStyles = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 4px;
+    gap: 2px;
+    font-size: 14px;
   }
   .author__img {
     aspect-ratio: 1;
-    width: 50px;
+    width: 40px;
+    height: 40px;
     /* position: absolute; */
     /* right: 40px; */
     /* bottom: 70px; */

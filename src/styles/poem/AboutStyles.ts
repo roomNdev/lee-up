@@ -31,7 +31,7 @@ export const AboutSectionStyles = styled.div`
             .bio__image {
             float: right;
             margin: 15px;
-            margin-left: 20px;
+            margin-left: 30px;
             overflow: visible;
             min-width: 260px;
             max-width: 45%;

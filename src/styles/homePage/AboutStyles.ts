@@ -9,7 +9,7 @@ export const AboutSectionStyles = styled.div`
             font-weight: 500;
         }
     .container {
-        margin-top: 40px;
+        margin-top: 60px;
         display: flex;
         align-items: center;
         text-align: center;
@@ -56,6 +56,7 @@ export const AboutSectionStyles = styled.div`
         .container {
         flex-direction: column;
             .groupal__image {
+                margin-bottom: 10px;
             /* background-color: var(--primary-light-blue); */
             /* border-radius: 160px 32pxpx 32pxpx 160px; */
             img {
