@@ -23,6 +23,10 @@ const query = graphql`
       publicStoreURL
       publicIndexURL
     }
+    localSearchPoems {
+      publicStoreURL
+      publicIndexURL
+    }
   }
 `;
 
@@ -33,6 +37,7 @@ function Search() {
   const [blogsIndexStore, setBlogsIndexStore] = useState(null);
   const [categoriesIndexStore, setCategoriesIndexStore] = useState(null);
   const [authorsIndexStore, setAuthorsIndexStore] = useState(null);
+  const [poemsIndexStore, setPoemsIndexStore] = useState(null);
   const data = useStaticQuery(query);
 
   useEffect(() => {
@@ -56,6 +61,11 @@ function Search() {
     publicStoreURL: authorsPublicStoreURL,
     publicIndexURL: authorsPublicIndexURL,
   } = data.localSearchAuthors;
+  const {
+    publicStoreURL: poemsPublicStoreURL,
+    publicIndexURL: poemsPublicIndexURL,
+  } = data.localSearchPoems;
+
 
   const handleOnFocus = async () => {
     if (blogsIndexStore && categoriesIndexStore && authorsIndexStore) return;
@@ -66,6 +76,8 @@ function Search() {
       { data: categoriesStore },
       { data: authorsIndex },
       { data: authorsStore },
+      { data: poemsIndex },
+      { data: poemsStore },
     ] = await Promise.all([
       axios.get(`${blogsPublicIndexURL}`),
       axios.get(`${blogsPublicStoreURL}`),
@@ -73,6 +85,8 @@ function Search() {
       axios.get(`${categoriesPublicStoreURL}`),
       axios.get(`${authorsPublicIndexURL}`),
       axios.get(`${authorsPublicStoreURL}`),
+      axios.get(`${poemsPublicIndexURL}`),
+      axios.get(`${poemsPublicStoreURL}`),
     ]);
     setBlogsIndexStore({
       index: blogsIndex,
@@ -85,6 +99,10 @@ function Search() {
     setAuthorsIndexStore({
       index: authorsIndex,
       store: authorsStore,
+    });
+    setPoemsIndexStore({
+      index: poemsIndex,
+      store: poemsStore,
     });
   };
 
@@ -103,13 +121,16 @@ function Search() {
         {searchQuery &&
           blogsIndexStore &&
           categoriesIndexStore &&
-          authorsIndexStore && (
+          authorsIndexStore &&
+          poemsIndexStore &&
+          (
             <div className="search__result">
               <SearchResult
                 searchQuery={searchQuery}
                 blogsIndexStore={blogsIndexStore}
                 categoriesIndexStore={categoriesIndexStore}
                 authorsIndexStore={authorsIndexStore}
+                poemsIndexStore={poemsIndexStore}
               />
             </div>
           )}

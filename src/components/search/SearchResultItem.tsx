@@ -57,8 +57,30 @@ function AuthorSearchResultItem({ author }) {
     </SearchResultItemStyles>
   );
 }
+function PoemSearchResultItem({ poem }) {
+  const { closeSearchModal } = useContext(SearchModalContext);
+  return (
+    <SearchResultItemStyles
+      to={`/poem/${poem.slug.current}`}
+      onClick={() => closeSearchModal()}
+    >
+      {poem.coverImage && <GatsbyImage
+        image={poem.coverImage.asset.gatsbyImageData}
+        alt={poem.coverImage.alt}
+        className="img"
+      />}
+      <div>
+        <Title className="title">{poem.title}</Title>
+        <ParagraphText className="categoriesText">
+          {format(new Date(poem.publishedAt), 'p, MMMM dd, yyyy')}
+        </ParagraphText>
+      </div>
+    </SearchResultItemStyles>
+  );
+}
 export {
   CategorySearchResultItem,
   BlogSearchResultItem,
   AuthorSearchResultItem,
+  PoemSearchResultItem
 };

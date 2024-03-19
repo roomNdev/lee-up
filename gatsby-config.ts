@@ -50,6 +50,44 @@ const config: GatsbyConfig = {
             coverImage: node.coverImage,
           })),
       }
+    },{
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'poems',
+        engine: 'flexsearch',
+        engineOptions: 'speed',
+        query: `
+        {
+          allSanityPoem {
+            nodes {
+              id
+              title
+              publishedAt
+              slug {
+                current
+              }
+              coverImage {
+                asset {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+
+        } 
+        `,
+        ref: 'id',
+        index: ['title'],
+        store: ['id', 'title', 'publishedAt', 'slug', 'coverImage'],
+        normalizer: ({ data }) =>
+          data.allSanityPoem.nodes.map((node) => ({
+            id: node.id,
+            title: node.title,
+            publishedAt: node.publishedAt,
+            slug: node.slug,
+            coverImage: node.coverImage,
+          })),
+      }
     },
     {
       resolve: `gatsby-plugin-local-search`,

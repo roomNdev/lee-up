@@ -40,6 +40,7 @@ const InstagramSection: React.FC<{}> = () => {
     return (
         <InstagramSectionStyles>
             <Title tag={"h2"}>Síguenos en instagram</Title>
+                <a href={`https://www.instagram.com/${profile?.username}`} target='_blank' rel='noreferer'><h3>{profile && `@${profile.username}`}</h3></a>
             <section className="container">
                 {feed && 
                     <>
@@ -60,7 +61,6 @@ const InstagramSection: React.FC<{}> = () => {
                 }     
             </section>
             
-            <a href={`https://www.instagram.com/${profile?.username}`} target='_blank' rel='noreferer'><h3>{profile && `@${profile.username}`}</h3></a>
         </InstagramSectionStyles>
     )
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const InstagramSectionStyles = styled.div`
             /* width: 100%; */
             display: flex;
+            /* background-color: var(--text-1); */
             justify-content: center;
             align-items: center;
             flex-direction: column;
@@ -16,11 +17,11 @@ export const InstagramSectionStyles = styled.div`
             font-weight: 500;
         }
         h3 {
-            margin-top: 40px;
+            margin-top: 10px;
             /* background-color: #fff; */
             color: var(--text-1);
             font-size: 20px;
-            text-decoration: underline;
+            /* text-decoration: underline; */
         }
     .container {
             margin-top: 20px;
@@ -37,11 +38,13 @@ export const InstagramSectionStyles = styled.div`
             justify-content: center;
             transition: scale .5s;
             overflow: hidden;
+            border-radius: 16px;
             background-color: var(--primary-light-blue);
             padding: 4px;
             width: 310px;
             cursor: pointer;
             img{
+            border-radius: 16px;
                 width: 300px;
                 height: 300px;
             }
@@ -51,7 +54,7 @@ export const InstagramSectionStyles = styled.div`
             p {
                 color: var(--gray);
                overflow: hidden;
-               font-size: 12px;
+               font-size: 15px;
                display: -webkit-box;
                -webkit-line-clamp: 2; /* number of lines to show */
                        line-clamp: 2; 
@@ -70,11 +73,13 @@ export const InstagramSectionStyles = styled.div`
             width: 150px;
             height: 200px;
             /* min-height: 200px; */
+            padding: 10px;
             p {
                 max-width: 150px;
             }
             img {
                 width: 140px;
+                padding: 4px;
                 max-height: 150px;
             }
         }
@@ -83,8 +88,13 @@ export const InstagramSectionStyles = styled.div`
     @media only screen and (max-width: 640px) {
         .container{
             gap: 0;
+            padding-block: 12px;
+            border-radius: 16px;
+            /* max-width: 85%; */
+            background-color: var(--primary-light-blue);
             .post{
                 height: 150px;
+                border-radius: 0;
                 /* padding-top: 2px; */
                 p {
                 display: none;
