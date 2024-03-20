@@ -102,27 +102,30 @@ const IndexPage: React.FC<PageProps>  = () => {
           {
             genres.map((genre) => {
                 return(
-                    <>
+                    <div key={genre.title}>
                         <Title tag={"h2"} className="title">{genre.title}</Title>
                         <hr className="hr" />
+                        <PoemGridStyles >
                         {
                             poems.map((item) => {
                                 if (genre.title !== item.genre[0].title) { return }
                                 return (
-                                    <PoemGridStyles>
-                                        <PoemItem
+                                    <PoemItem
                                         key={item.id}
                                         genre={""}
+                                        publishedAt={item.publishedAt}
                                         path={item.slug.current}
                                         author={item.author}
                                         title={item.title}
-                                        image={item}
+                                        image={
+                                          {imageData: item.coverImage,}
+                                        }
                                         />
-                                    </PoemGridStyles>
                                 )
                             })
-                        }
-                    </>
+                          }
+                          </PoemGridStyles>
+                    </div>
                 )      
             })
           }

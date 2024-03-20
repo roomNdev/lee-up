@@ -4,6 +4,7 @@ export const PoemGridStyles = styled.div`
   display: flex;
   margin-top: 3.5rem;
   gap: 30px;
+  
   justify-content: center;
   flex-wrap: wrap;
   .no__members {
