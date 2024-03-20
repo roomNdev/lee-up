@@ -7,20 +7,19 @@ export const InstagramSectionStyles = styled.div`
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        a {
-        }
         h2 {
             font-size: 20px;
             color: var(--gray);
             text-align: center;
             margin-top: 160px;
-            font-weight: 500;
+            font-weight: 700;
         }
         h3 {
             margin-top: 10px;
             /* background-color: #fff; */
             color: var(--text-1);
             font-size: 20px;
+            font-weight: 400;
             /* text-decoration: underline; */
         }
     .container {
@@ -68,6 +67,9 @@ export const InstagramSectionStyles = styled.div`
         
     }
     @media only screen and (max-width: 820px) {
+        h2 {
+            margin-top: 80px;
+        }
     .container {
         .post {
             width: 150px;
@@ -87,30 +89,58 @@ export const InstagramSectionStyles = styled.div`
     
     @media only screen and (max-width: 640px) {
         .container{
-            gap: 0;
+            gap: 0px;
             padding-block: 12px;
             border-radius: 16px;
             /* max-width: 85%; */
-            background-color: var(--primary-light-blue);
+            
             .post{
-                height: 150px;
+                padding: 30px;
+                /* background-color: var(--primary-light-blue); */
+                height: 160px;
+                width: 170px;
                 border-radius: 0;
                 /* padding-top: 2px; */
                 p {
                 display: none;
                 }
                 img{
-                height: 140px;
-                }
+                height: 160px;
+                width: 160px;
+            }
+            &:nth-child(1){ border-top-left-radius: 16px}
+            &:nth-child(3){ border-top-right-radius: 16px}
+            &:nth-child(4){ border-bottom-left-radius: 16px}
+            &:nth-child(6){ border-bottom-right-radius: 16px}
             }
         }
     }
-    
-    @media only screen and (max-width: 390px) {
+    @media (max-width: 630px) {
         .container{
+        .post{
+            border-radius: 0;
+            &:nth-child(1){border-top-left-radius: 16px;}
+            &:nth-child(2){ border-top-right-radius: 16px}
+            &:nth-child(3){ border-top-right-radius: 0 }
+            &:nth-child(4){ border-bottom-left-radius: 0}
+            &:nth-child(5){ border-bottom-left-radius: 16px}
+            &:nth-child(6){ border-bottom-right-radius: 16px}
+        }}
+    }
+    
+    @media only screen and (max-width: 420px) {
+        .container{
+            /* border-radius: 0; */
             .post{
+            border-radius: 0;
+            &:nth-child(1){border-top-left-radius: 16px;}
+            &:nth-child(2){ border-top-right-radius: 0}
+            &:nth-child(3){ border-top-right-radius: 16px }
+            &:nth-child(4){ border-bottom-left-radius: 16px}
+            &:nth-child(5){ border-bottom-left-radius: 0}
+            &:nth-child(6){ border-bottom-right-radius: 16px}
                 height: 110px;
-                width: auto;
+                width: 110px;
                 p {
                 display: none;
                 }
@@ -121,5 +151,36 @@ export const InstagramSectionStyles = styled.div`
             }
         }
     }
-  }
+    
+    @media only screen and (max-width: 408px) {
+        .container {
+            .post {
+            border-radius: 0;
+            &:nth-child(1){border-top-left-radius: 16px;}
+            &:nth-child(2){ border-top-right-radius: 16px}
+            &:nth-child(3){ border-top-right-radius: 0 }
+            &:nth-child(4){ border-bottom-left-radius: 0}
+            &:nth-child(5){ border-bottom-left-radius: 16px}
+            &:nth-child(6){ border-bottom-right-radius: 16px}
+
+            }
+        }
+    }
+
+    @media only screen and (max-width: 280px) {
+        .container {
+            .post {
+            border-radius: 0;
+            &:nth-child(1){border-top-left-radius: 0;}
+            &:nth-child(2){ border-top-right-radius: 0}
+            &:nth-child(3){ border-top-right-radius: 0 }
+            &:nth-child(4){ border-bottom-left-radius: 0}
+            &:nth-child(5){ border-bottom-left-radius: 0}
+            &:nth-child(6){ border-bottom-right-radius: 0}
+
+            }
+        }
+    }
+    }
+  
 `

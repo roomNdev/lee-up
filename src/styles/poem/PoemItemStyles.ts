@@ -6,8 +6,10 @@ export const PoemItemStyles = styled.div`
   align-items: center;
   border-radius: 10px;
   position: relative;
-  min-width: 250px;
+  min-width: 200px;
+  /* width: 40%; */
   max-width: 250px;
+  margin-inline: 10px;
   background-color: var(--primary-light-blue);
   height: max-content;
   .img {
@@ -82,6 +84,14 @@ export const PoemItemStyles = styled.div`
   @media only screen and (max-width: 768px) {
     .title {
       margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .by__container{
+      font-size: 1.1rem;
+    }
+    .author__img{
+      width: 30px;
+      height: 30px;
     }
   }
 `;

@@ -91,7 +91,7 @@ export const BlogItemStyles = styled.div`
     .title {
       margin-bottom: 0.5rem;
       margin-inline: 8px;
-      font-size: 18px;
+      font-size: 16px;
     }
     .excerpt {
       display: none;

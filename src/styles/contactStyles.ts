@@ -52,7 +52,9 @@ export default styled.div`
         text-align: center;
     }
     .form {
-        padding-inline: 15%;
+        max-width: 900px;
+        padding-inline: 2%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 20px;

@@ -12,6 +12,7 @@ export const PoemAuthorGridStyles = styled.div`
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-inline: 20px;
   .no__members {
     text-align: center;
   }

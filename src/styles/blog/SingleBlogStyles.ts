@@ -12,6 +12,7 @@ export const SingleBlogStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
   }
   .blog-cover-image {
     height: 300px;

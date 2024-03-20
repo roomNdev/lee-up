@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PodcastsStyles = styled.div`
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,11 +34,12 @@ export const PodcastsStyles = styled.div`
       font-weight: 600;
       text-align: center;
       transition: background-color .2s;
-      /* width: 220px; */
+      width: 220px;
       gap: 6px;
       color: var(--gray);
       svg {
         width: 40px;
+        height: 40px;
       }
       &:hover {
         background-color: #eee;
@@ -51,6 +52,7 @@ export const PodcastsStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     &::after {
       content: '';
       position: absolute;
@@ -83,11 +85,11 @@ export const PodcastsStyles = styled.div`
       }
     }
       .hero__image {
-        position: absolute;
+        /* position: absolute; */
         z-index: -1;
         right: 0;
-        top: 20%;
-        width: 30%;
+        /* top: 20%; */
+        /* width: 30%; */
     }
   }
   @media only screen and (max-width: 768px) {
@@ -96,28 +98,22 @@ export const PodcastsStyles = styled.div`
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      flex-direction: column-reverse;
-      padding-top: 80px;
+    flex-direction: row;
+      padding-top: 20px;
       padding-bottom: 80px;
       &::after {
         width: 100%;
       }
       .hero__image {
-        position: absolute;
+        /* position: absolute; */
         z-index: -1;
         right: 0;
-        top: 30%;
+        top: 20%;
+        min-height: 30%;
+        min-width: 30%;
           /* height: 300px; */
           /* margin: 0 auto; */
         }
-      .right {
-        position: initial;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        
-      }
       .left {
         width: 100%;
         margin-top: 1rem;
@@ -128,5 +124,30 @@ export const PodcastsStyles = styled.div`
         }
       }
     }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .hero__wrapper {
+      .links {
+        .link{
+          width: 150px;
+          font-size: 1.5rem;
+          svg{
+            max-width: 30px;
+            max-height: 30px;
+          }
+        }
+      }
+      .left{
+    .hero__heading{
+      font-size: 2.5rem;
+    } 
+    .description {
+        font-size: 1.5rem;
+    }}
+    .hero__image {
+      min-width: 40%;
+    }
+  }
   }
 `;

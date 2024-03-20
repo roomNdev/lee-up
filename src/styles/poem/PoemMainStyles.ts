@@ -44,7 +44,7 @@ export const PoemSectionStyles = styled.div`
         align-items: center;
         justify-content: center;
         grid-column: 3/5;
-        grid-row: 2/3;
+        grid-row: 2;
         align-self: center;
         justify-self: center;
     .hero__image__creativa {
@@ -107,7 +107,7 @@ export const PoemSectionStyles = styled.div`
       }
     }
       .text__wrapper {
-        grid-row: 1/2;
+        grid-row: 1;
         grid-column: 1/5;
 
       }
@@ -119,11 +119,13 @@ export const PoemSectionStyles = styled.div`
         max-width: 50%;
         position: relative;
         z-index: 1;
+        max-height: 400px;
       }
     }
     p {
+        margin-top: 40px;
         grid-column: 1/5;
-        grid-row: 3/5;
+        grid-row: 3/4;
 
     }
   }
@@ -159,15 +161,16 @@ export const PoemSectionStyles = styled.div`
     .container{
       .hero__wrapper {
         gap: 0;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 150px);
       }
     }
     .image__container{
-      grid-row: 2/5;
+      grid-row: 3;
     }
     
     p {
+      margin-top: 0;
       grid-row: 5;
     }
   }
@@ -176,14 +179,15 @@ export const PoemSectionStyles = styled.div`
     .container{
       .hero__wrapper {
         gap: 5px;
-        grid-template-rows: repeat(3, 150px);
+        grid-template-rows: repeat(5, 160px);
       }
     }
     .image__container{
       grid-row: 2/4;
     }
     p {
-      grid-row: 4;
+      margin-top: 15px;
+      grid-row: 4/6;
     }
   }
 `;
