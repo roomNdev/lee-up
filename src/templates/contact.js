@@ -17,8 +17,8 @@ function AuthorList({ data, pageContext }) {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_a1zbv1c', 'template_rwbzqun', form.current, {
-        publicKey: 'kHdRrLQaeSiijvDaR',
+      .sendForm('service_8nr81rx', 'template_nnka0ra', form.current, {
+        publicKey: 'EUegBhPVzc5CFFQka',
       })
       .then(
         () => {
