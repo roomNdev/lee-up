@@ -6,7 +6,7 @@ import { Title } from '../../typography/Title';
 import { PoemAuthorItemStyles } from '../../../styles/poem/PoemAuthorItemStyles';
 import ParagraphText from '../../typography/ParagraphText';
 
-function PoemAuthorItem({name, cicle, slug, profileImage}) {
+function PoemAuthorItem({name, cicle, slug, role, profileImage}) {
   return (
     <PoemAuthorItemStyles className="author-item">
       <Link to={`/miembros/${slug.current}`}>
@@ -22,7 +22,7 @@ function PoemAuthorItem({name, cicle, slug, profileImage}) {
           className="title">
             {name}
           </Title>
-          <ParagraphText className="cicle">{cicle[0] === undefined ? 'Miembro' : cicle[0].cicle}</ParagraphText> 
+          <ParagraphText className="cicle">{cicle[0] === undefined ? `${role}` : cicle[0].cicle}</ParagraphText> 
         </section>
       </Link>
     </PoemAuthorItemStyles>

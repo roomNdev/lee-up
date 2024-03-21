@@ -12,11 +12,12 @@ export const BlogGridStyles = styled.div`
   } */
 
   display: flex;
+  margin: 0 auto;
   margin-top: 3.5rem;
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
-  
+  max-width: 1000px;
   .no__members {
     text-align: center;
   }
