@@ -190,4 +190,21 @@ export const PoemSectionStyles = styled.div`
       grid-row: 4/6;
     }
   }
+  
+  @media only screen and (max-width: 350px) { 
+    .container{
+      margin-top: 10px;
+      .hero__wrapper {
+        /* gap: 5px; */
+        grid-template-rows: repeat(6, 150px);
+      }
+    }
+    .image__container{
+      grid-row: 3/4;
+    }
+    p {
+      margin-top: 15px;
+      grid-row: 4/7;
+    }
+   }
 `;
