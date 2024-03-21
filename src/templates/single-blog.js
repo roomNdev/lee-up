@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { format } from 'date-fns';
 import { BiCategory } from 'react-icons/bi';
-import { FiCalendar, FiUser } from 'react-icons/fi';
+import { FiCalendar, FiStar, FiUser } from 'react-icons/fi';
 import PageSpace from '../components/PageSpace.tsx';
 import ParagraphText from '../components/typography/ParagraphText.tsx';
 import { Title } from '../components/typography/Title.tsx';
@@ -19,6 +19,9 @@ export const postQuery = graphql`
       title
       publishedAt
       _rawBody
+      points
+      bookAuthor
+      bookAuthorBio
       coverImage {
         asset {
           gatsbyImageData
@@ -48,7 +51,9 @@ export const postQuery = graphql`
 
 function SingleBlog({ data }) {
   const blog = data.sanityBlog;
-  
+  const points = Math.round(blog.points)
+  const stars = Array.from(Array(points).keys())
+  console.log(stars);
   return (
     <SingleBlogStyles>
       <Seo title={blog.title} />
@@ -79,6 +84,24 @@ function SingleBlog({ data }) {
                 ))}
               </span>
             </ParagraphText>
+            
+            {
+              blog.bookAuthor && 
+            <ParagraphText className="bookAuthor">
+              <FiUser />
+              {blog.bookAuthor} 
+              {blog.bookAuthorBio && 
+                <a href={blog.bookAuthorBio} target='_blank' rel="noreferer">(Biografia)</a>
+              }
+            </ParagraphText>
+            }
+            
+            {
+              blog.points && 
+              <ParagraphText className="points">
+              Puntaje: {stars.map((star) =>( <FiStar key={star} color='var(--text-1)'/>))} ({blog.points})
+            </ParagraphText>
+            }
             <ParagraphText className="author">
             <GatsbyImage
               image={blog.author.profileImage.asset.gatsbyImageData}

@@ -36,7 +36,9 @@ export const SingleBlogStyles = styled.div`
   }
   .categoriesText,
   .author,
-  .publishedAt {
+  .publishedAt,
+  .bookAuthor,
+  .points {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
