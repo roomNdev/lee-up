@@ -6,16 +6,20 @@ export const BlogItemStyles = styled.div`
   align-items: center;
   border-radius: 10px;
   position: relative;
-  max-width: 250px;
+  max-width: 270px;
   width: 40%;
   background-color: var(--primary-light-blue);
   .img {
     max-width: 280px;
+    /* min-width: 280px; */
     height: 430px;
     border-radius: 10px 10px 0 0;
     margin-bottom: 1.5rem;
     [data-main-image] {
       transition: 0.3s ease-in-out transform;
+    }
+    img {
+      object-fit: cover !important;
     }
   }
   .author__img {
