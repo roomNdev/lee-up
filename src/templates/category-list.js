@@ -40,7 +40,7 @@ function Categories({ data, pageContext }) {
         <div className="container">
           <PageHeader
             title="Categorias"
-            description="This month will bring about the 88th Academy Awards. Starting in 1928, this prestigious award ceremony..."
+            description=""
           />
           <CategoryGrid categories={categories} />
           {/* {numberOfPages > 1 && (

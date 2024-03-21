@@ -29,7 +29,7 @@ function BlogItem({ path, excerpt, author, title, image, categories, publishedAt
         <Title className="title">{title}</Title>
       </Link>
       <ParagraphText className="excerpt">
-        {excerpt[0]._rawChildren[0].text}
+        {excerpt && excerpt[0]._rawChildren[0].text}
       </ParagraphText>
       <div className='button__wrapper'>
         <Button tag="a" variant='' className="button__more">
