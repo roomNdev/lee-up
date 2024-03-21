@@ -112,7 +112,7 @@ function SingleCategory({ data }) {
           <Seo title={category.title} />
           <PageHeader title={category.title} className="pageHeader">
             <ParagraphText className="description">
-              {category._rawDescription[0] && category._rawDescription[0].children[0].text}
+              {category._rawDescription && category._rawDescription[0].children[0].text}
             </ParagraphText>
             <GatsbyImage
               image={category.coverImage.asset.gatsbyImageData}
