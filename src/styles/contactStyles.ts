@@ -1,6 +1,30 @@
 import styled from 'styled-components';
 
 export default styled.div`
+    .tooltip-active{
+        opacity: 100;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    .tooltip-inactive{
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .tooltip{
+        position: fixed;
+        top: 10px;
+        left: 44%;
+        padding-inline: 48px;
+        border-radius: 16px;
+        font-size: 16px;
+        text-align: center;
+        z-index: 10000;
+        background-color: var(--primary-light-blue);
+        color: var(--gray);
+        transition: transform .5s ease, opacity .8s;
+    }
+
     .image__wrapper{
         display: flex;
         align-items: center;

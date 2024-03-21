@@ -2,7 +2,7 @@ import PageSpace from '../components/PageSpace.tsx';
 import Seo from '../components/seo.tsx';
 import { Title } from '../components/typography/Title.tsx';
 import ContactStyles from '../styles/contactStyles.ts'
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { StaticImage } from 'gatsby-plugin-image';
 import ParagraphText from '../components/typography/ParagraphText.tsx'
@@ -12,20 +12,31 @@ import ParagraphText from '../components/typography/ParagraphText.tsx'
 
 function AuthorList({ data, pageContext }) {
   const form = useRef();
+  const [isTooltipShowing, setIsTooltipShowing] = useState({display: false, status: ""})
+  const displayTooltip = (value) => {
+    setIsTooltipShowing({display: true, status: value})
+    setTimeout(() => {
+      setIsTooltipShowing({display: false, status: value})
+    }, 3000)
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_8nr81rx', 'template_nnka0ra', form.current, {
-        publicKey: 'EUegBhPVzc5CFFQka',
-      })
+    .sendForm('service_8nr81rx', 'template_nnka0ra', form.current, {
+      publicKey: 'EUegBhPVzc5CFFQka',
+    })
       .then(
         () => {
-          console.log('SUCCESS!');
+          form.current[0].value = ""
+          form.current[1].value = ""
+          form.current[2].value = ""
+          form.current[3].value = ""
+          displayTooltip("Mensaje enviado")
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          displayTooltip("Error al enviar mensaje")
         },
       );
   };
@@ -34,6 +45,9 @@ function AuthorList({ data, pageContext }) {
   <PageSpace top={80} bottom={100}>
     <Seo title="Contacto" />
     <ContactStyles>
+      <div className={`${isTooltipShowing.display ? 'tooltip-active' : 'tooltip-inactive'} tooltip`}>
+        {isTooltipShowing.status}
+      </div>
       <div className="container">
          <Title className="title">
              Contacto
@@ -61,11 +75,17 @@ function AuthorList({ data, pageContext }) {
          </section>
       <form ref={form} onSubmit={sendEmail} className='form'>
         <section className='info'>
-          <input type="text" name="user_name" id='name' placeholder='Nombre'/>
+          <input type="text" name="user_name" id='name' placeholder='Nombre' 
+          required
+          />
           <input type="text" name="user_surname" id='surname' placeholder='Apellido'/>
         </section>
-          <input type="email" name="user_email" id='email' placeholder='E-mail'/>
-        <textarea name="message" id='message' placeholder='Mensaje'/>
+          <input type="email" name="user_email" id='email' placeholder='E-mail' 
+          required
+          />
+        <textarea name="message" id='message' placeholder='Mensaje' 
+        required
+        />
         <ParagraphText className="label"> ¿Quieres colaborar o ser parte de nosotros? Contáctanos</ParagraphText>
         <input type="submit" value="Enviar" id='submit'/>
       </form>

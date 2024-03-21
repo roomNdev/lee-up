@@ -183,7 +183,7 @@ export const PoemSectionStyles = styled.div`
       }
     }
     .image__container{
-      grid-row: 2/4;
+      grid-row: 3/4;
     }
     p {
       margin-top: 15px;
