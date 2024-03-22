@@ -35,6 +35,7 @@ export const AuthorItemStyles = styled.div`
     margin-top: 4px;
   }
   .role {
+    text-align: center;
     font-size: 20px;
     color: var(--text-1);
   }
