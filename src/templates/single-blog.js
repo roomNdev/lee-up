@@ -51,8 +51,11 @@ export const postQuery = graphql`
 
 function SingleBlog({ data }) {
   const blog = data.sanityBlog;
-  const points = Math.round(blog.points)
+  const points = Math.round(blog.points || 1) 
+
   const stars = Array.from(Array(points).keys())
+
+
   console.log(stars);
   return (
     <SingleBlogStyles>

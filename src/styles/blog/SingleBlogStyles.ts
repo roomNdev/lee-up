@@ -15,12 +15,14 @@ export const SingleBlogStyles = styled.div`
     margin-bottom: 2rem;
   }
   .blog-cover-image {
-    height: 300px;
     /* margin-bottom: 2rem; */
     display: inline;
+    /* height: 200px; */
     /* margin: 0 auto; */
     /* display: flex; */
     img {
+      max-height: 400px;
+      height: 100%
       /* object-fit: contain !important; */
     }
   }
