@@ -13,7 +13,7 @@ import ExMemberItem from './ExMemberItem';
 function ExMemberGrid({}) {
   const data = useStaticQuery(
   graphql`
-  {allSanityAuthor(filter: {exmember: {eq: true}}) {
+  {allSanityAuthor(filter: {member: {eq: false}}) {
     nodes {
       id
       name
