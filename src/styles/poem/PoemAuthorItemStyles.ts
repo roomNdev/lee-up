@@ -11,7 +11,10 @@ export const PoemAuthorItemStyles = styled.div`
   align-items: center;
   max-width: 180px;
   min-width: 150px;
+  .role {
+  }
   .cicle {
+    text-align: center;
     color: var(--white-1);
   }
   .image__wrapper {

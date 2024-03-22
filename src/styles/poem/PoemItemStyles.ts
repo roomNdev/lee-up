@@ -10,6 +10,7 @@ export const PoemItemStyles = styled.div`
   /* width: 40%; */
   max-width: 250px;
   margin-inline: 10px;
+  /* padding-inline: 10px; */
   background-color: var(--primary-light-blue);
   height: max-content;
   .img {
@@ -27,7 +28,14 @@ export const PoemItemStyles = styled.div`
     align-items: center;
     flex-direction: row;
     gap: 2px;
+    padding-inline: 10px;
     font-size: 14px;
+    .data-author{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* flex-wrap: wrap; */
+    }
   }
   .author__img {
     aspect-ratio: 1;

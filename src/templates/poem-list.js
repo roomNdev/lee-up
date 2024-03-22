@@ -6,7 +6,7 @@ import PageSpace from '../components/PageSpace.tsx';
 // import Pagination from '../components/Pagination.tsx';
 import HeroSection from '../components/poems/main/HeroSection.tsx'
 import About from '../components/poems/main/About.tsx'
-import PoemGrid from '../components/poems/main/PoemAuthorsGrid.tsx'
+import PoemAuthorsGrid from '../components/poems/main/PoemAuthorsGrid.tsx'
 import FeaturedWriting from '../components/poems/main/FeaturedWriting.tsx'
 
 
@@ -62,7 +62,7 @@ function Poems({ data, pageContext }) {
           <HeroSection />
             <About/>
             <FeaturedWriting/>
-            <PoemGrid/>
+            <PoemAuthorsGrid/>
             
       </PageSpace>
     </>
