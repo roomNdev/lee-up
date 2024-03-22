@@ -13,7 +13,7 @@ import ExMemberItem from './ExMemberItem';
 function ExMemberGrid({}) {
   const data = useStaticQuery(
   graphql`
-  {allSanityAuthor(filter: {member: {eq: false}}) {
+  {allSanityAuthor(filter: {exmember: {eq: true}}) {
     nodes {
       id
       name
@@ -62,9 +62,8 @@ function ExMemberGrid({}) {
                             <summary>{cicle.cicle}</summary>
                             <PoemAuthorGridStyles>
                             {authors.map((item) => {
-                            if (cicle.cicle !== item.cicle[0].cicle) {
-                            return 
-                            }
+                            if(item.member === true) { return }
+                            if (cicle.cicle !== item.cicle[0].cicle) { return }
                             return (
                             <ExMemberItem
                                 key={item.id}
