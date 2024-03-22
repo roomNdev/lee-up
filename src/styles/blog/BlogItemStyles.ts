@@ -92,6 +92,8 @@ export const BlogItemStyles = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
+    min-width: 135px;
+    max-width: 135px;
     .title {
       margin-bottom: 0.5rem;
       margin-inline: 8px;
@@ -101,7 +103,12 @@ export const BlogItemStyles = styled.div`
       display: none;
     }
     .img{
-      height: 215px;
+      /* width: 100%; */
+      height: auto;
+      img {
+        height: 210px;
+        width: 100%;
+      }
     }
     .author__img{
       top: 195px;
