@@ -112,7 +112,7 @@ function SingleAuthor({ data }) {
   const author = data.sanityAuthor;
   const blogs = data.allSanityBlog.nodes;
   const poems = data.allSanityPoem.nodes;
-  console.log(author);
+
   return (
     <PageSpace top={80} bottom={100}>
       <Seo title={author.name} />
@@ -133,9 +133,9 @@ function SingleAuthor({ data }) {
             ? <Title className="poems__title">{author.role} {`- ${author.area[0].name}`}</Title> 
             : <Title className="poems__title">Miembro del taller de escritura creativa</Title>}
           <div className="author__socialList">
-            <a href={`https://www.${author.facebook}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>
-            <a href={`https://www.instagram.com/${author.instagram}`} target='_blank'rel='noreferrer'><FaInstagram/></a>
-            <a href={`https://www.${author.linkedin}`} target='_blank'  rel='noreferrer'><FaLinkedin/></a>
+            {author.facebook && <a href={`https://www.${author.facebook.trim()}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>}
+            {author.instagram && <a href={`https://www.instagram.com/${author.instagram.trim()}`} target='_blank'rel='noreferrer'><FaInstagram/></a>}
+            {author.linkedin &&  <a href={`https://www.${author.linkedin.trim()}`} target='_blank'  rel='noreferrer'><FaLinkedin/></a>}
         </div>
           {blogs[0] 
             ?  <BlogGrid blogs={blogs} />  
