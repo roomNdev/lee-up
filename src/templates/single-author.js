@@ -133,9 +133,9 @@ function SingleAuthor({ data }) {
             ? <Title className="poems__title">{author.role} {`- ${author.area[0].name}`}</Title> 
             : <Title className="poems__title">Miembro del taller de escritura creativa</Title>}
           <div className="author__socialList">
-            <a href={`https://www.facebook.com/${author.facebook}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>
+            <a href={`https://www.${author.facebook}`} target='_blank'  rel='noreferrer'><FaFacebook/></a>
             <a href={`https://www.instagram.com/${author.instagram}`} target='_blank'rel='noreferrer'><FaInstagram/></a>
-            <a href={`https://www.linkedin.com/${author.linkedin}`} target='_blank'  rel='noreferrer'><FaLinkedin/></a>
+            <a href={`https://www.${author.linkedin}`} target='_blank'  rel='noreferrer'><FaLinkedin/></a>
         </div>
           {blogs[0] 
             ?  <BlogGrid blogs={blogs} />  
