@@ -64,19 +64,20 @@ function SinglePoem({ data }) {
               <FiCalendar />
               {format(new Date(poem.publishedAt), 'p, MMMM dd, yyyy')}
             </ParagraphText>
-            <ParagraphText className="categoriesText">
-              <BiCategory />
-              <span>
+            
                 {poem.categories.map((item, index) => (
-                  <span key={item.slug.current}>
+                  <ParagraphText className="categoriesText" key={item.slug.current}>
+                  <BiCategory />
+                  <span >
+                    <span>
                     <Link to={`/categorias/${item.slug.current}`}>
                       {item.title}
                     </Link>
                     {index < poem.categories.length - 1 ? ', ' : ''}
                   </span>
-                ))}
               </span>
             </ParagraphText>
+                ))}
             <ParagraphText className="author">
               <FiUser />
               <Link to={`/miembros/${poem.author.slug.current}`}>
@@ -89,11 +90,11 @@ function SinglePoem({ data }) {
             <MyPortableText value={poem._rawBody} />
           </div>
           <div className='button__wrapper'>
-          <Link to='/'>
+          {/* <Link to='/'>
             <Button variant='more'>
               {'< Inicio'}
             </Button>
-          </Link>
+          </Link> */}
           </div>
         </div>
       </PageSpace>

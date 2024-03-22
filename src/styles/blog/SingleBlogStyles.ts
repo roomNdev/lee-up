@@ -22,8 +22,8 @@ export const SingleBlogStyles = styled.div`
     /* display: flex; */
     img {
       max-height: 400px;
-      height: 100%
-      /* object-fit: contain !important; */
+      height: 100%;
+      object-fit: contain !important;
     }
   }
   .title {

@@ -3,9 +3,17 @@ import styled from 'styled-components';
 export default styled.div`
   max-width: 700px;
   margin: 0 auto;
-  .blog-cover-image {
-    height: 300px;
-    margin-bottom: 2rem;
+  .poem-cover-image {
+    /* margin-bottom: 2rem; */
+    display: inline;
+    /* height: 200px; */
+    /* margin: 0 auto; */
+    /* display: flex; */
+    img {
+      max-height: 400px;
+      height: 100%;
+      object-fit: contain !important;
+    }
   }
   .title {
     margin-bottom: 1rem;
